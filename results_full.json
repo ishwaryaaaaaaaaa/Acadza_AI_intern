@@ -1,0 +1,3622 @@
+[
+ {
+  "reportId": "R001",
+  "questionId": "60f744b3f1b9bc7cc7b4a949",
+  "verdict": "defect",
+  "repair": "answer_key",
+  "edit": {
+   "field": "answer",
+   "find": "\"C\"",
+   "replace": "\"A\""
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 0.96,
+  "evidence": "Two independent blind solves give A but the stored key is C; stored solution also concludes with this answer.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/answer_key"
+   ],
+   [
+    "G10 key proof",
+    "pass",
+    "solver A=A; solver B=A; stored solution also concludes with this answer"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'answer_key' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'answer' is within ['answer', 'solution']"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.96 >= 0.9"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": "R002",
+  "student_reply": "Thank you for the heads-up. The answer was wrong, and we fixed it to A.",
+  "reply_source": "model",
+  "reply_draft": "Thank you for the heads-up. The answer was wrong, and we fixed it to A.",
+  "reply_problems": [],
+  "audit": {
+   "status": "wrong",
+   "answer": "A",
+   "stored": "C",
+   "proof": [
+    "solver A=A",
+    "solver B=A",
+    "stored solution also concludes with this answer"
+   ],
+   "solution_supports": true
+  },
+  "solves": [
+   {
+    "answer": "A",
+    "sound": true,
+    "working": "Resistor voltage is in-phase; inductor and capacitor voltages are 90° out of phase and opposite. Total voltage magnitude = sqrt(V_R^2 + (V_L - V_C)^2) = sqrt(40^2 + (60-30)^2) = sqrt(2500) = 50 V.",
+    "_usage": [
+     212,
+     879
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "A",
+    "sound": true,
+    "working": "In a series LCR circuit, the supply voltage is given by $V = \\sqrt{V_R^2 + (V_L - V_C)^2}$. Given $V_L = 60\\text{ V}$, $V_C = 30\\text{ V}$, and $V_R = 40\\text{ V}$, we have $V = \\sqrt{40^2 + (60 - 30)^2} = \\sqrt{1600 + 900} = 50\\text{ V}$.",
+    "_usage": [
+     232,
+     140
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R001",
+   "evidence": "The solution is correct, but the answer key is wrong.",
+   "verdict": "defect",
+   "repair": "answer_key",
+   "edit": {
+    "field": "answer",
+    "find": "C",
+    "replace": "B"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.9992777560438171,
+   "_p_repair": 0.9975271728866747
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R002",
+  "questionId": "60f744b3f1b9bc7cc7b4a949",
+  "verdict": "defect",
+  "repair": "answer_key",
+  "edit": {
+   "field": "answer",
+   "find": "\"C\"",
+   "replace": "\"A\""
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 0.96,
+  "evidence": "Two independent blind solves give A but the stored key is C; stored solution also concludes with this answer.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/answer_key"
+   ],
+   [
+    "G10 key proof",
+    "pass",
+    "solver A=A; solver B=A; stored solution also concludes with this answer"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'answer_key' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'answer' is within ['answer', 'solution']"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.96 >= 0.9"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Thank you for the heads-up. The answer was wrong, and we fixed it to A.",
+  "reply_source": "model",
+  "reply_draft": "Thank you for the heads-up. The answer was wrong, and we fixed it to A.",
+  "reply_problems": [],
+  "audit": {
+   "status": "wrong",
+   "answer": "A",
+   "stored": "C",
+   "proof": [
+    "solver A=A",
+    "solver B=A",
+    "stored solution also concludes with this answer"
+   ],
+   "solution_supports": true
+  },
+  "solves": [
+   {
+    "answer": "A",
+    "sound": true,
+    "working": "Resistor voltage is in-phase; inductor and capacitor voltages are 90° out of phase and opposite. Total voltage magnitude = sqrt(V_R^2 + (V_L - V_C)^2) = sqrt(40^2 + (60-30)^2) = sqrt(2500) = 50 V.",
+    "_usage": [
+     212,
+     879
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "A",
+    "sound": true,
+    "working": "In a series LCR circuit, the supply voltage is given by $V = \\sqrt{V_R^2 + (V_L - V_C)^2}$. Given $V_L = 60\\text{ V}$, $V_C = 30\\text{ V}$, and $V_R = 40\\text{ V}$, we have $V = \\sqrt{40^2 + (60 - 30)^2} = \\sqrt{1600 + 900} = 50\\text{ V}$.",
+    "_usage": [
+     232,
+     140
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R002",
+   "evidence": "The solution is correct, but the answer key is wrong.",
+   "verdict": "defect",
+   "repair": "answer_key",
+   "edit": {
+    "field": "answer",
+    "find": "C",
+    "replace": "B"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.9947853450653984,
+   "_p_repair": 0.9998622130434948
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R003",
+  "questionId": "60f744b3f1b9bc7cc7b4a949",
+  "verdict": "defect",
+  "repair": "answer_key",
+  "edit": {
+   "field": "answer",
+   "find": "\"C\"",
+   "replace": "\"A\""
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 0.96,
+  "evidence": "Two independent blind solves give A but the stored key is C; stored solution also concludes with this answer.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/answer_key"
+   ],
+   [
+    "G10 key proof",
+    "pass",
+    "solver A=A; solver B=A; stored solution also concludes with this answer"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'answer_key' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'answer' is within ['answer', 'solution']"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.96 >= 0.9"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": "R002",
+  "student_reply": "Thank you for the heads-up. The answer was wrong, and we fixed it to A.",
+  "reply_source": "model",
+  "reply_draft": "Thank you for the heads-up. The answer was wrong, and we fixed it to A.",
+  "reply_problems": [],
+  "audit": {
+   "status": "wrong",
+   "answer": "A",
+   "stored": "C",
+   "proof": [
+    "solver A=A",
+    "solver B=A",
+    "stored solution also concludes with this answer"
+   ],
+   "solution_supports": true
+  },
+  "solves": [
+   {
+    "answer": "A",
+    "sound": true,
+    "working": "Resistor voltage is in-phase; inductor and capacitor voltages are 90° out of phase and opposite. Total voltage magnitude = sqrt(V_R^2 + (V_L - V_C)^2) = sqrt(40^2 + (60-30)^2) = sqrt(2500) = 50 V.",
+    "_usage": [
+     212,
+     879
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "A",
+    "sound": true,
+    "working": "In a series LCR circuit, the supply voltage is given by $V = \\sqrt{V_R^2 + (V_L - V_C)^2}$. Given $V_L = 60\\text{ V}$, $V_C = 30\\text{ V}$, and $V_R = 40\\text{ V}$, we have $V = \\sqrt{40^2 + (60 - 30)^2} = \\sqrt{1600 + 900} = 50\\text{ V}$.",
+    "_usage": [
+     232,
+     140
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R003",
+   "evidence": "The solution is correct, but the answer key is wrong.",
+   "verdict": "defect",
+   "repair": "answer_key",
+   "edit": {
+    "field": "answer",
+    "find": "C",
+    "replace": "B"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.9997100478942392,
+   "_p_repair": 0.9999207321018658
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R004",
+  "questionId": "68e870ef42c06737d6e565c4",
+  "verdict": "defect",
+  "repair": "answer_key",
+  "edit": {
+   "field": "answer",
+   "find": "\"A\"",
+   "replace": "\"D\""
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 0.9,
+  "evidence": "Two independent blind solves give D but the stored key is A; stored solution does not reach a checkable conclusion.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R004 verdict prob 0.62; R004 repair prob 0.82"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/answer_key"
+   ],
+   [
+    "G10 key proof",
+    "pass",
+    "solver A=D; solver B=D; stored solution does not reach a checkable conclusion"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'answer_key' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'answer' is within ['answer', 'solution']"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.90 >= 0.9"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Dhanyavaad! Aapne sahi kaha, aur ab humne poora sawal theek kar diya hai. Pehle galat jawaab tha, ab sahi jawaab hai: D.",
+  "reply_source": "model",
+  "reply_draft": "Dhanyavaad! Aapne sahi kaha, aur ab humne poora sawal theek kar diya hai. Pehle galat jawaab tha, ab sahi jawaab hai: D.",
+  "reply_problems": [],
+  "audit": {
+   "status": "wrong",
+   "answer": "D",
+   "stored": "A",
+   "proof": [
+    "solver A=D",
+    "solver B=D",
+    "stored solution does not reach a checkable conclusion"
+   ],
+   "solution_supports": null
+  },
+  "solves": [
+   {
+    "answer": "D",
+    "sound": true,
+    "working": "p = 1/3 ρ v² = 1/3·9×10⁻²·(400)² = 4800 Pa",
+    "_usage": [
+     251,
+     742
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "D",
+    "sound": true,
+    "working": "The pressure of a gas is related to its rms velocity and density by $P = \\frac{1}{3} \\rho v_{\\text{rms}}^2$. Substituting $\\rho = 9 \\times 10^{-2} \\text{ kg/m}^3$ and $v_{\\text{rms}} = 400 \\text{ m/s}$, we get $P = \\frac{1}{3} \\times (9 \\times 10^{-2}) \\times (400)^2 = 4800 \\text{ N/m}^2$.",
+    "_usage": [
+     283,
+     144
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R004",
+   "evidence": "The solution's final answer is 4800 N/m^2, not 8225 N/m^2.",
+   "verdict": "defect",
+   "repair": "solution_fix",
+   "edit": {
+    "field": "solution",
+    "find": "4800N/m^2",
+    "replace": "8225N/m^2"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.6186215392420827,
+   "_p_repair": 0.8154510771116634
+  },
+  "escalated": [
+   "R004 verdict prob 0.62",
+   "R004 repair prob 0.82"
+  ]
+ },
+ {
+  "reportId": "R005",
+  "questionId": "68dea616d0cda73d07e93ae6",
+  "verdict": "defect",
+  "repair": "answer_key",
+  "edit": {
+   "field": "answer",
+   "find": "\"2\"",
+   "replace": "\"1\""
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 0.96,
+  "evidence": "Two independent blind solves give 1 but the stored key is 2; stored solution also concludes with this answer.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R005 verdict prob 0.50; R005 repair prob 0.53"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/answer_key"
+   ],
+   [
+    "G10 key proof",
+    "pass",
+    "solver A=1; solver B=1; stored solution also concludes with this answer"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'answer_key' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'answer' is within ['answer', 'solution']"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.96 >= 0.9"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Thanks for the heads-up. The answer was wrong, but it's fixed now. The correct answer is 1.",
+  "reply_source": "model",
+  "reply_draft": "Thanks for the heads-up. The answer was wrong, but it's fixed now. The correct answer is 1.",
+  "reply_problems": [],
+  "audit": {
+   "status": "wrong",
+   "answer": "1",
+   "stored": "2",
+   "proof": [
+    "solver A=1",
+    "solver B=1",
+    "stored solution also concludes with this answer"
+   ],
+   "solution_supports": true
+  },
+  "solves": [
+   {
+    "answer": "1",
+    "sound": true,
+    "working": "Flux from face charge = (q/2)/(2ε0)=q/(4ε0). Flux from corner charge = (2q)/(8ε0)=q/(4ε0). Total = q/(2ε0) = (1*q)/(2ε0) so n=1.",
+    "_usage": [
+     209,
+     1933
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "1",
+    "sound": true,
+    "working": "Charge at the face center contributes $\\frac{1}{2}\\frac{q/2}{\\epsilon_0} = \\frac{q}{4\\epsilon_0}$ flux. Charge at the corner contributes $\\frac{1}{8}\\frac{2q}{\\epsilon_0} = \\frac{q}{4\\epsilon_0}$ flux. Total flux through the cube is $\\Phi = \\frac{q}{4\\epsilon_0} + \\frac{q}{4\\epsilon_0} = \\frac{q}{2\\epsilon_0}$. Comparing with $\\frac{nq}{2\\epsilon_0}$, we get $n = 1$.",
+    "_usage": [
+     218,
+     162
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R005",
+   "evidence": "The solution shows the total flux as [M3: \\frac{q}{2\\epsilon_0}].",
+   "verdict": "defect",
+   "repair": "answer_key",
+   "edit": {
+    "field": "answer",
+    "find": "2",
+    "replace": "1"
+   },
+   "confidence": 0.9,
+   "_p_verdict": 0.4993671910653169,
+   "_p_repair": 0.5345679331290252
+  },
+  "escalated": [
+   "R005 verdict prob 0.50",
+   "R005 repair prob 0.53"
+  ]
+ },
+ {
+  "reportId": "R006",
+  "questionId": "696a866665252c04fc1f81c2",
+  "verdict": "defect",
+  "repair": "stem_data",
+  "edit": {
+   "field": "question",
+   "find": "solid copper cube,",
+   "replace": "solid copper cube of side 10 cm,"
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 0.9,
+  "evidence": "Solution uses edge length 10×10⁻² m, not given in question; answer key 50 mm³ matches that assumption.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R006 repair prob 0.77"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/stem_data"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'stem_data' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'question' is within ['question']"
+   ],
+   [
+    "G4 anchor",
+    "pass",
+    "find occurs exactly once, in plain text"
+   ],
+   [
+    "G5 math",
+    "pass",
+    "4 math node(s) byte-identical"
+   ],
+   [
+    "G7 markup",
+    "pass",
+    "tag structure unchanged"
+   ],
+   [
+    "G9 stem_data",
+    "pass",
+    "added value(s) ['10'] are stated in the solution"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.90 >= 0.85"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {
+   "question": "<h3>The volume contraction of a solid copper cube of side 10 cm, when subjected to a hydraulic pressure of <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn>7</mn><mi>&times;</mi><msup><mn>10</mn><mrow><mn>6</mn></mrow></msup><mrow><mtext>&nbsp;</mtext><mi mathvariant=\"normal\">P</mi><mi mathvariant=\"normal\">a</mi></mrow></mrow></math>, would be <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>_</mi><mi>_</mi><mi>_</mi><mi>_</mi></mrow></math> <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><msup><mrow><mi mathvariant=\"normal\">m</mi><mi mathvariant=\"normal\">m</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow></math>.</h3>\n\n<h3>(Given bulk modulus of copper <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mo>=</mo><mn>1.4</mn><mi>&times;</mi><msup><mn>10</mn><mrow><mn>11</mn></mrow></msup><msup><mrow><mi mathvariant=\"normal\">N</mi><mi mathvariant=\"normal\">m</mi></mrow><mrow><mo>&minus;</mo><mn>2</mn></mrow></msup></mrow></math> )</h3>\n"
+  },
+  "duplicate_of": null,
+  "student_reply": "Good catch: a value needed to solve it was missing. It has been fixed now. Thanks for reporting!",
+  "reply_source": "template",
+  "reply_draft": "Thank you for reporting the missing edge length. The question now includes the value 10 mm, and the answer is 50 mm³.",
+  "reply_problems": [
+   "value/unit not in verified facts: ['10 mm']"
+  ],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R006",
+   "evidence": "The question text does not mention the edge length of the cube.",
+   "verdict": "defect",
+   "repair": "stem_data",
+   "edit": {
+    "field": "question",
+    "find": "The volume contraction of a solid copper cube",
+    "replace": "The volume contraction of a solid copper cube of edge length 10 cm"
+   },
+   "confidence": 0.9,
+   "_p_verdict": 0.9166837690666998,
+   "_p_repair": 0.7688525502953912
+  },
+  "escalated": [
+   "R006 repair prob 0.77"
+  ]
+ },
+ {
+  "reportId": "R007",
+  "questionId": "60f742f6660d187cc13a8078",
+  "verdict": "defect",
+  "repair": "stem_data",
+  "edit": {
+   "field": "question",
+   "find": "an inductance",
+   "replace": "an inductance of 95.5 mH"
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 1.0,
+  "evidence": "The question does not state the value of the inductance.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/stem_data"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'stem_data' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'question' is within ['question']"
+   ],
+   [
+    "G4 anchor",
+    "pass",
+    "find occurs exactly once, in plain text"
+   ],
+   [
+    "G5 math",
+    "pass",
+    "0 math node(s) byte-identical"
+   ],
+   [
+    "G7 markup",
+    "pass",
+    "tag structure unchanged"
+   ],
+   [
+    "G9 stem_data",
+    "pass",
+    "added value(s) ['95.5'] are stated in the solution"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "1.00 >= 0.85"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {
+   "question": "<h3><span style=\"color:#000000\">A resistance of 40 ohm and an inductance of 95.5 mH are connected in series in a 50 cycles/second ac circuit. The impedance of this combination is very nearly</h3><h3>(A)<span style=\"color:#000000\"> <span style=\"color:#000000\">30 ohm<br />(B)<span style=\"color:#000000\"> <span style=\"color:#000000\">40 ohm<br />(C)<span style=\"color:#000000\"> <span style=\"color:#000000\">50 ohm<br />(D)</span></span></span><span style=\"color:#000000\"> </span></span></span><span style=\"color:#000000\">60 ohm</span></span></span></h3>"
+  },
+  "duplicate_of": "R008",
+  "student_reply": "Dhanyavaad! Aapne sahi kaha, inductance ki value nahi di thi. Ab sahi hai.",
+  "reply_source": "model",
+  "reply_draft": "Dhanyavaad! Aapne sahi kaha, inductance ki value nahi di thi. Ab sahi hai.",
+  "reply_problems": [],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R007",
+   "evidence": "The question does not state the value of the inductance.",
+   "verdict": "defect",
+   "repair": "stem_data",
+   "edit": {
+    "field": "question",
+    "find": "an inductance",
+    "replace": "an inductance of 95.5 mH"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.9751487602570484,
+   "_p_repair": 0.9385549535576366
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R008",
+  "questionId": "60f742f6660d187cc13a8078",
+  "verdict": "defect",
+  "repair": "stem_data",
+  "edit": {
+   "field": "question",
+   "find": "an inductance",
+   "replace": "an inductance of 95.5 mH"
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 1.0,
+  "evidence": "The question does not state the value of the inductance.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/stem_data"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'stem_data' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'question' is within ['question']"
+   ],
+   [
+    "G4 anchor",
+    "pass",
+    "find occurs exactly once, in plain text"
+   ],
+   [
+    "G5 math",
+    "pass",
+    "0 math node(s) byte-identical"
+   ],
+   [
+    "G7 markup",
+    "pass",
+    "tag structure unchanged"
+   ],
+   [
+    "G9 stem_data",
+    "pass",
+    "added value(s) ['95.5'] are stated in the solution"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "1.00 >= 0.85"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {
+   "question": "<h3><span style=\"color:#000000\">A resistance of 40 ohm and an inductance of 95.5 mH are connected in series in a 50 cycles/second ac circuit. The impedance of this combination is very nearly</h3><h3>(A)<span style=\"color:#000000\"> <span style=\"color:#000000\">30 ohm<br />(B)<span style=\"color:#000000\"> <span style=\"color:#000000\">40 ohm<br />(C)<span style=\"color:#000000\"> <span style=\"color:#000000\">50 ohm<br />(D)</span></span></span><span style=\"color:#000000\"> </span></span></span><span style=\"color:#000000\">60 ohm</span></span></span></h3>"
+  },
+  "duplicate_of": null,
+  "student_reply": "Thank you for your report. The question did not state the value of the inductance, but it is now fixed.",
+  "reply_source": "model",
+  "reply_draft": "Thank you for your report. The question did not state the value of the inductance, but it is now fixed.",
+  "reply_problems": [],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R008",
+   "evidence": "The question does not state the value of the inductance.",
+   "verdict": "defect",
+   "repair": "stem_data",
+   "edit": {
+    "field": "question",
+    "find": "an inductance",
+    "replace": "an inductance of 95.5 mH"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.9783003996539786,
+   "_p_repair": 0.9989438494200309
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R009",
+  "questionId": "622f08d7b70e4b50e4500a1b",
+  "verdict": "defect",
+  "repair": "option_repair",
+  "edit": null,
+  "extra_edits": [],
+  "route": "faculty_review",
+  "confidence": 0.9,
+  "evidence": "Question shows only options A, B, C; automatic check confirms option D missing.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R010 verdict prob 0.83; R009 verdict prob 0.71"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/option_repair"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'option_repair' is auto-eligible"
+   ],
+   [
+    "G15 edit",
+    "fail",
+    "no concrete edit to apply"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.90 >= 0.85"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "A teacher will check and fix the question.",
+  "reply_source": "model",
+  "reply_draft": "A teacher will check and fix the question.",
+  "reply_problems": [],
+  "audit": {
+   "status": "confirmed",
+   "answer": "C",
+   "stored": "C",
+   "proof": [
+    "solver A=C",
+    "solver B=C"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "C",
+    "sound": true,
+    "working": "Total momentum = 10kg*14m/s + 4kg*0 = 140 kg·m/s. Total mass = 14 kg. V_cm = 140/14 = 10 m/s. Option C.",
+    "_usage": [
+     237,
+     1205
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "C",
+    "sound": true,
+    "working": "Using the formula for the velocity of the centre of mass: $v_{\\text{cm}} = \\frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}$. Here, $m_1 = 10\\text{ kg}$, $v_1 = 14\\text{ m/s}$, $m_2 = 4\\text{ kg}$, and $v_2 = 0$. Thus, $v_{\\text{cm}} = \\frac{10 \\times 14 + 4 \\times 0}{10 + 4} = \\frac{140}{14} = 10\\text{ m/s}$.",
+    "_usage": [
+     258,
+     171
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R009",
+   "evidence": "Option D is missing from the question.",
+   "verdict": "defect",
+   "repair": "option_repair",
+   "edit": {
+    "field": "question",
+    "find": ")",
+    "replace": "D) [M4: ]"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.7117437386375162,
+   "_p_repair": 0.9988166998523956
+  },
+  "escalated": [
+   "R010 verdict prob 0.83",
+   "R009 verdict prob 0.71"
+  ]
+ },
+ {
+  "reportId": "R010",
+  "questionId": "622f08d7b70e4b50e4500a1b",
+  "verdict": "defect",
+  "repair": "option_repair",
+  "edit": null,
+  "extra_edits": [],
+  "route": "faculty_review",
+  "confidence": 0.9,
+  "evidence": "Question shows only options A, B, C; automatic check confirms option D missing.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R010 verdict prob 0.83; R009 verdict prob 0.71"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/option_repair"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'option_repair' is auto-eligible"
+   ],
+   [
+    "G15 edit",
+    "fail",
+    "no concrete edit to apply"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.90 >= 0.85"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "A teacher will check and fix the question.",
+  "reply_source": "model",
+  "reply_draft": "A teacher will check and fix the question.",
+  "reply_problems": [],
+  "audit": {
+   "status": "confirmed",
+   "answer": "C",
+   "stored": "C",
+   "proof": [
+    "solver A=C",
+    "solver B=C"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "C",
+    "sound": true,
+    "working": "Total momentum = 10kg*14m/s + 4kg*0 = 140 kg·m/s. Total mass = 14 kg. V_cm = 140/14 = 10 m/s. Option C.",
+    "_usage": [
+     237,
+     1205
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "C",
+    "sound": true,
+    "working": "Using the formula for the velocity of the centre of mass: $v_{\\text{cm}} = \\frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}$. Here, $m_1 = 10\\text{ kg}$, $v_1 = 14\\text{ m/s}$, $m_2 = 4\\text{ kg}$, and $v_2 = 0$. Thus, $v_{\\text{cm}} = \\frac{10 \\times 14 + 4 \\times 0}{10 + 4} = \\frac{140}{14} = 10\\text{ m/s}$.",
+    "_usage": [
+     258,
+     171
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R010",
+   "evidence": "Option D is missing from the question.",
+   "verdict": "defect",
+   "repair": "option_repair",
+   "edit": {
+    "field": "question",
+    "find": ")",
+    "replace": "D) [M4: ]"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.8259583503810075,
+   "_p_repair": 0.9884829103384224
+  },
+  "escalated": [
+   "R010 verdict prob 0.83",
+   "R009 verdict prob 0.71"
+  ]
+ },
+ {
+  "reportId": "R011",
+  "questionId": "68e872546e45ba37dcc16bc0",
+  "verdict": "defect",
+  "repair": "option_repair",
+  "edit": {
+   "field": "question",
+   "find": "C",
+   "replace": "C (missing)"
+  },
+  "extra_edits": [],
+  "route": "faculty_review",
+  "confidence": 0.9,
+  "evidence": "option C is blank, key is C",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/option_repair"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'option_repair' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'question' is within ['question']"
+   ],
+   [
+    "G4 anchor/G5 math",
+    "fail",
+    "find string occurs 3 times in the text the model saw (need exactly 1)"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.90 >= 0.85"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Dhanyavaad! Ek teacher yeh check karega aur sahi karega.",
+  "reply_source": "model",
+  "reply_draft": "Dhanyavaad! Ek teacher yeh check karega aur sahi karega.",
+  "reply_problems": [],
+  "audit": {
+   "status": "disputed",
+   "answer": null,
+   "stored": "C",
+   "proof": [
+    "solver A=None",
+    "solver B='C'"
+   ]
+  },
+  "solves": [
+   {
+    "answer": null,
+    "sound": false,
+    "working": "Coulomb force magnitude on each charge is k|q1 q2|/r^2, same for both, so ratio = 1:1. No option matches, thus unsound.",
+    "_usage": [
+     221,
+     1256
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "C",
+    "sound": true,
+    "working": "According to Coulomb's law and Newton's third law, the force exerted by the first charge on the second is equal in magnitude to the force exerted by the second charge on the first ($F_{12} = F_{21} = k|q_1q_2|/r^2$). Thus, the ratio of forces acting on them is 1:1 (Option C).",
+    "_usage": [
+     238,
+     102
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R011",
+   "evidence": "option C is blank, key is C",
+   "verdict": "defect",
+   "repair": "option_repair",
+   "edit": {
+    "field": "question",
+    "find": "C",
+    "replace": "C (missing)"
+   },
+   "confidence": 0.9,
+   "_p_verdict": 0.9646179430264541,
+   "_p_repair": 0.9705664780067916
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R012",
+  "questionId": "61dffbec08489156b684bd22",
+  "verdict": "defect",
+  "repair": "spelling",
+  "edit": {
+   "field": "question",
+   "find": "Epithellial tisue",
+   "replace": "Epithelial tissue"
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 0.95,
+  "evidence": "Option A reads “Epithellial tisue”, but the correct term is “Epithelial tissue”; the solution references epithelial tissue, confirming the intended answer.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R012 repair prob 0.70"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/spelling"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'spelling' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'question' is within ['question', 'solution']"
+   ],
+   [
+    "G4 anchor",
+    "pass",
+    "find occurs exactly once, in plain text"
+   ],
+   [
+    "G5 math",
+    "pass",
+    "0 math node(s) byte-identical"
+   ],
+   [
+    "G7 markup",
+    "pass",
+    "tag structure unchanged"
+   ],
+   [
+    "G6 digits",
+    "pass",
+    "no digit moved"
+   ],
+   [
+    "G6 spelling",
+    "pass",
+    "small word-level change"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.95 >= 0.85"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {
+   "question": "<h3><span style=\"color:#000000\">Which tissue is present in the lining of small intestine?</h3><h3>(A)<span style=\"color:#000000\"> <span style=\"color:#000000\">Epithelial tissue<br />(B)<span style=\"color:#000000\"> <span style=\"color:#000000\">Connective tissue<br />(C)<span style=\"color:#000000\"> <span style=\"color:#000000\">Nervous tissue<br />(D)</span></span></span><span style=\"color:#000000\"> </span></span></span><span style=\"color:#000000\">Muscular tissue</span></span></span></h3>"
+  },
+  "duplicate_of": null,
+  "student_reply": "Thank you for reporting this! The question had a spelling mistake: the correct term is 'Epithelial tissue'. We've fixed it.",
+  "reply_source": "model",
+  "reply_draft": "Thank you for reporting this! The question had a spelling mistake: the correct term is 'Epithelial tissue'. We've fixed it.",
+  "reply_problems": [],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R012",
+   "evidence": "Option A: 'Epithellial tisue'",
+   "verdict": "defect",
+   "repair": "spelling",
+   "edit": {
+    "field": "question",
+    "find": "Epithellial tisue",
+    "replace": "Epithelial tissue"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.9623795148811938,
+   "_p_repair": 0.6988101681186748
+  },
+  "escalated": [
+   "R012 repair prob 0.70"
+  ]
+ },
+ {
+  "reportId": "R013",
+  "questionId": "617fa18efd53ff1629ed890f",
+  "verdict": "defect",
+  "repair": "exam_reference",
+  "edit": {
+   "field": "question",
+   "find": "(NEET 2019)",
+   "replace": ""
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 0.9,
+  "evidence": "Question contains '(NEET 2019)' tag; student asks why; answer D correct per solution; exam reference is unwanted.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R013 verdict prob 0.78; R013 triage says no_error but the linter found a matching defect"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/exam_reference"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'exam_reference' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'question' is within ['question', 'solution']"
+   ],
+   [
+    "G4 anchor",
+    "pass",
+    "find occurs exactly once, in plain text"
+   ],
+   [
+    "G5 math",
+    "pass",
+    "0 math node(s) byte-identical"
+   ],
+   [
+    "G7 markup",
+    "pass",
+    "tag structure unchanged"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.90 >= 0.85"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {
+   "question": "<h3><span style=\"color:#000000\"> Which of the following is the green expanded part of<span style=\"color:#000000\">leaf with vein and veinlets?</h3><h3>(A) Petiole<br />(B) Node</span><br />(C) Stipule<br />(D) Lamina</span></span></span></h3>"
+  },
+  "duplicate_of": null,
+  "student_reply": "Thanks for the heads-up! The question had an exam tag, which was removed. The correct answer is D.",
+  "reply_source": "model",
+  "reply_draft": "Thanks for the heads-up! The question had an exam tag, which was removed. The correct answer is D.",
+  "reply_problems": [],
+  "audit": {
+   "status": "confirmed",
+   "answer": "D",
+   "stored": "D",
+   "proof": [
+    "solver A=D",
+    "solver B=D"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "D",
+    "sound": true,
+    "working": "Lamina is the green expanded leaf part containing veins and veinlets.",
+    "_usage": [
+     183,
+     206
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "D",
+    "sound": true,
+    "working": "According to NCERT Morphology of Flowering Plants, the leaf lamina (or leaf blade) is defined as the green expanded part of the leaf containing veins and veinlets.",
+    "_usage": [
+     197,
+     49
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R013",
+   "evidence": "question: '(NEET 2019)'",
+   "verdict": "no_error",
+   "repair": null,
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.7832959696255549,
+   "_p_repair": 0.877750494992853
+  },
+  "escalated": [
+   "R013 verdict prob 0.78",
+   "R013 triage says no_error but the linter found a matching defect"
+  ]
+ },
+ {
+  "reportId": "R014",
+  "questionId": "63765a28f1d8416ae0408d89",
+  "verdict": "defect",
+  "repair": "markup_leak",
+  "edit": {
+   "field": "question",
+   "find": "\\frac{7}{8}",
+   "replace": "7/8"
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 0.95,
+  "evidence": "Automatic check reports raw LaTeX '\\frac{7}{8}' visible in question; student noted \\frac code appearing.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R014 verdict prob 0.69"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/markup_leak"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'markup_leak' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'question' is within ['question', 'solution']"
+   ],
+   [
+    "G4 anchor",
+    "pass",
+    "find occurs exactly once, in plain text"
+   ],
+   [
+    "G5 math",
+    "pass",
+    "0 math node(s) byte-identical"
+   ],
+   [
+    "G7 markup",
+    "pass",
+    "tag structure unchanged"
+   ],
+   [
+    "G6 digits",
+    "pass",
+    "no digit moved"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.95 >= 0.85"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {
+   "question": "<h3>The half life period of a radioactive substance is 60 days. The time taken for 7/8 th of its original mass to disintegrate will be :<br/>(A) 120 days<br/>(B) 130 days<br/>(C) 180 days<br/>(D) 20 days</h3>"
+  },
+  "duplicate_of": null,
+  "student_reply": "Thank you for the report. The question had a problem with the math code, and the correct answer is C.",
+  "reply_source": "model",
+  "reply_draft": "Thank you for the report. The question had a problem with the math code, and the correct answer is C.",
+  "reply_problems": [],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R014",
+   "evidence": "question: 'The half life period of a radioactive substance is 60 days. The time taken for \\frac{7}{8} th of its original mass to disintegrate will be :'",
+   "verdict": "defect",
+   "repair": "markup_leak",
+   "edit": {
+    "field": "question",
+    "find": "\\\\frac{7}{8}",
+    "replace": "7/8"
+   },
+   "confidence": 0.9,
+   "_p_verdict": 0.6893221469378815,
+   "_p_repair": 0.9920083365027148
+  },
+  "escalated": [
+   "R014 verdict prob 0.69"
+  ]
+ },
+ {
+  "reportId": "R015",
+  "questionId": "6956d79788d7701e5617bc29",
+  "verdict": "defect",
+  "repair": "identical_options",
+  "edit": null,
+  "extra_edits": [],
+  "route": "faculty_review",
+  "confidence": 0.95,
+  "evidence": "Options B and C both read \"0 W\"; automatic check flags OPT_DUP. Stored answer is B.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R015 repair prob 0.75"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/option_repair"
+   ],
+   [
+    "G17 lint fact",
+    "pass",
+    "two options are identical in the record, so this is identical_options (human only), not option_repair"
+   ],
+   [
+    "G3 human-only",
+    "fail",
+    "'identical_options' is never auto-applied"
+   ],
+   [
+    "G3 human-only",
+    "note",
+    "model's suggested edit is kept as a suggestion only"
+   ],
+   [
+    "G2 scope",
+    "fail",
+    "'identical_options' may touch [], edit targets 'question'"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.95 >= 0.85"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Thanks for the heads-up! A teacher will check and fix the issue.",
+  "reply_source": "model",
+  "reply_draft": "Thanks for the heads-up! A teacher will check and fix the issue.",
+  "reply_problems": [],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R015",
+   "evidence": "options B and C are identical",
+   "verdict": "defect",
+   "repair": "identical_options",
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.9987900608673199,
+   "_p_repair": 0.7503671416715249
+  },
+  "escalated": [
+   "R015 repair prob 0.75"
+  ]
+ },
+ {
+  "reportId": "R016",
+  "questionId": "6263d75bdd44e265ef926d97",
+  "verdict": "defect",
+  "repair": "solution_fix",
+  "edit": {
+   "field": "solution",
+   "find": "a = 40 cm",
+   "replace": "a = 20 cm"
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 1.0,
+  "evidence": "The solution is wrong, the answer is correct.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/solution_fix"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'solution_fix' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'solution' is within ['solution']"
+   ],
+   [
+    "G4 anchor",
+    "pass",
+    "find occurs exactly once, in plain text"
+   ],
+   [
+    "G5 math",
+    "pass",
+    "0 math node(s) byte-identical"
+   ],
+   [
+    "G7 markup",
+    "pass",
+    "tag structure unchanged"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "1.00 >= 0.85"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {
+   "solution": "<h3><span style=\"color:#000000\">Let a be the size of each side of the cube. Then,<br />\r\n\r\n <span style=\"color:#000000\">800 &times; g = (2) &times; (a<span style=\"color:#000000\"><sup>2</sup><span style=\"color:#000000\">) &times; 1 &times; g</span></span><br />\r\n\r\n <span style=\"color:#000000\">a = 20 cm</span></span></span></h3>"
+  },
+  "duplicate_of": null,
+  "student_reply": "Thank you for your report! The solution was wrong, but the answer is correct: 20 cm.",
+  "reply_source": "model",
+  "reply_draft": "Thank you for your report! The solution was wrong, but the answer is correct: 20 cm.",
+  "reply_problems": [],
+  "audit": {
+   "status": "confirmed",
+   "answer": "20",
+   "stored": "20",
+   "proof": [
+    "solver A=20",
+    "solver B=20"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "20",
+    "sound": true,
+    "working": "Let side = s. Without mass, 2 cm above water gives submerged depth s−2, so ρ_wood/ρ_water = (s−2)³/s³ = 1−2/s. With 800 g added, cube is fully immersed and neutrally buoyant: ρ_water s³ = ρ_wood s³ + 800 → (ρ_water−ρ_wood)s³ = 800. Substitute ρ_wood = ρ_water(1−2/s) → 2ρ_water s² = 800 → s² = 400 → s = 20 cm.",
+    "_usage": [
+     191,
+     5474
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "20",
+    "sound": true,
+    "working": "When the mass is removed, the submerged volume decreases by $\\Delta V = L^2 \\times 2\\text{ cm}^3$. The change in buoyant force equals the weight of the removed mass: $\\rho_{\\text{water}} L^2 (2) = 800\\text{ g}$. With $\\rho_{\\text{water}} = 1\\text{ g/cm}^3$, $2 L^2 = 800 \\implies L^2 = 400 \\implies L = 20\\text{ cm}$.",
+    "_usage": [
+     200,
+     140
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R016",
+   "evidence": "The solution is wrong, the answer is correct.",
+   "verdict": "defect",
+   "repair": "solution_fix",
+   "edit": {
+    "field": "solution",
+    "find": "a = 40 cm",
+    "replace": "a = 20 cm"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.9859229395976566,
+   "_p_repair": 0.9693981063476427
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R017",
+  "questionId": "6208e80a9cb2ab67dac61bd0",
+  "verdict": "already_fixed",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 0.9,
+  "evidence": "Faculty edit log shows \"mere\" corrected to \"more\" in options A-C after the report; current options now read correctly.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R017 repair prob 0.84"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "already_fixed/None"
+   ],
+   [
+    "G13 already_fixed",
+    "pass",
+    "faculty edited this question at 2026-11-07T10:42:00Z after the report; lint is clean now"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Thanks! A teacher already corrected this after your report, so you should see the fixed version now.",
+  "reply_source": "template",
+  "reply_draft": "",
+  "reply_problems": [
+   "status uses a fixed template"
+  ],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R017",
+   "evidence": "The word 'mere' is present in options A, B and C.",
+   "verdict": "already_fixed",
+   "repair": null,
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.9146731231426102,
+   "_p_repair": 0.8431304145830971
+  },
+  "escalated": [
+   "R017 repair prob 0.84"
+  ]
+ },
+ {
+  "reportId": "R018",
+  "questionId": "612151a6a34397610a9a2e58",
+  "verdict": "defect",
+  "repair": "solution_fix",
+  "edit": {
+   "field": "solution",
+   "find": "5.469\\times10^{-10}m=5.47AA",
+   "replace": "none"
+  },
+  "extra_edits": [],
+  "route": "faculty_review",
+  "confidence": 0.99,
+  "evidence": "solution has a wrong step",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/solution_fix"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'solution_fix' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'solution' is within ['solution']"
+   ],
+   [
+    "G4 anchor/G5 math",
+    "fail",
+    "find string touches math, a line break, or spans several tags; faculty must edit"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.99 >= 0.85"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Thanks for the heads-up. A teacher will check and fix the solution.",
+  "reply_source": "model",
+  "reply_draft": "Thanks for the heads-up. A teacher will check and fix the solution.",
+  "reply_problems": [],
+  "audit": {
+   "status": "confirmed",
+   "answer": "B",
+   "stored": "B",
+   "proof": [
+    "solver A=B",
+    "solver B=B"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "B",
+    "sound": true,
+    "working": "Use λ = h/p, p = h/λ, K = p^2/(2m) = h^2/(2m λ^2). Insert λ = 0.3 nm = 3×10^-10 m, h = 6.626×10^-34 J·s, m = 9.109×10^-31 kg. Compute K ≈ 2.7×10^-18 J ≈ 16.8 eV. Answer B.",
+    "_usage": [
+     196,
+     1496
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "B",
+    "sound": true,
+    "working": "The kinetic energy $E$ is related to de-Broglie wavelength $\\lambda$ by $E = \\frac{h^2}{2m\\lambda^2}$. Substituting $h = 6.626 \\times 10^{-34}\\text{ J s}$, $m = 9.1 \\times 10^{-31}\\text{ kg}$, and $\\lambda = 0.3 \\times 10^{-9}\\text{ m}$, we get $E \\approx 2.688 \\times 10^{-19}\\text{ J} = \\frac{2.688 \\times 10^{-19}}{1.6 \\times 10^{-19}}\\text{ eV} \\approx 16.8\\text{ eV}$.",
+    "_usage": [
+     209,
+     189
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R018",
+   "evidence": "solution has a wrong step",
+   "verdict": "defect",
+   "repair": "solution_fix",
+   "edit": {
+    "field": "solution",
+    "find": "5.469\\times10^{-10}m=5.47AA",
+    "replace": "none"
+   },
+   "confidence": 0.99,
+   "_p_verdict": 0.9984649178457954,
+   "_p_repair": 0.9976847253924583
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R019",
+  "questionId": "612151a6a34397610a9a2e58",
+  "verdict": "defect",
+  "repair": "solution_fix",
+  "edit": {
+   "field": "solution",
+   "find": "5.469\\times10^{-10}m=5.47AA",
+   "replace": "none"
+  },
+  "extra_edits": [],
+  "route": "faculty_review",
+  "confidence": 0.99,
+  "evidence": "solution has a wrong step",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/solution_fix"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'solution_fix' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'solution' is within ['solution']"
+   ],
+   [
+    "G4 anchor/G5 math",
+    "fail",
+    "find string touches math, a line break, or spans several tags; faculty must edit"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.99 >= 0.85"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": "R018",
+  "student_reply": "Dhanyavaad. Ek teacher solution check karega aur theek karega.",
+  "reply_source": "model",
+  "reply_draft": "Dhanyavaad. Ek teacher solution check karega aur theek karega.",
+  "reply_problems": [],
+  "audit": {
+   "status": "confirmed",
+   "answer": "B",
+   "stored": "B",
+   "proof": [
+    "solver A=B",
+    "solver B=B"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "B",
+    "sound": true,
+    "working": "Use λ = h/p, p = h/λ, K = p^2/(2m) = h^2/(2m λ^2). Insert λ = 0.3 nm = 3×10^-10 m, h = 6.626×10^-34 J·s, m = 9.109×10^-31 kg. Compute K ≈ 2.7×10^-18 J ≈ 16.8 eV. Answer B.",
+    "_usage": [
+     196,
+     1496
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "B",
+    "sound": true,
+    "working": "The kinetic energy $E$ is related to de-Broglie wavelength $\\lambda$ by $E = \\frac{h^2}{2m\\lambda^2}$. Substituting $h = 6.626 \\times 10^{-34}\\text{ J s}$, $m = 9.1 \\times 10^{-31}\\text{ kg}$, and $\\lambda = 0.3 \\times 10^{-9}\\text{ m}$, we get $E \\approx 2.688 \\times 10^{-19}\\text{ J} = \\frac{2.688 \\times 10^{-19}}{1.6 \\times 10^{-19}}\\text{ eV} \\approx 16.8\\text{ eV}$.",
+    "_usage": [
+     209,
+     189
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R019",
+   "evidence": "solution has a wrong step",
+   "verdict": "defect",
+   "repair": "solution_fix",
+   "edit": {
+    "field": "solution",
+    "find": "5.469\\times10^{-10}m=5.47AA",
+    "replace": "none"
+   },
+   "confidence": 0.99,
+   "_p_verdict": 0.988897517573569,
+   "_p_repair": 0.9977191377283976
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R020",
+  "questionId": "68c8153cfb6b2f16e2d3ceaf",
+  "verdict": "defect",
+  "repair": "answer_key",
+  "edit": {
+   "field": "answer",
+   "find": "[\"A, B, D\"]",
+   "replace": "[\"A\", \"B\", \"D\"]"
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 0.95,
+  "evidence": "Malformed key ['A, B, D'] parses unambiguously to ['A', 'B', 'D'], matching two independent solves.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R020 verdict prob 0.81; R020 repair prob 0.55"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/type_mismatch"
+   ],
+   [
+    "G10 key proof",
+    "pass",
+    "format repair matches both solves"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'answer_key' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'answer' is within ['answer', 'solution']"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.95 >= 0.9"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Thank you for the report. The correct answer is A, B, and D.",
+  "reply_source": "model",
+  "reply_draft": "Thank you for the report. The correct answer is A, B, and D.",
+  "reply_problems": [],
+  "audit": {
+   "status": "confirmed",
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "stored": [
+    "A",
+    "B",
+    "D"
+   ],
+   "proof": [
+    "solver A=['A', 'B', 'D']",
+    "solver B=['A', 'B', 'D']"
+   ]
+  },
+  "solves": [
+   {
+    "answer": [
+     "A",
+     "B",
+     "D"
+    ],
+    "sound": true,
+    "working": "Uniform E-field: velocity parallel → straight line; perpendicular → parabola. Uniform B-field: velocity ⟂ B → circular motion in plane ⟂ B; velocity ∥ B → straight line, not helix. Hence A, B, D correct.",
+    "_usage": [
+     249,
+     2286
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": [
+     "A",
+     "B",
+     "D"
+    ],
+    "sound": true,
+    "working": "A: Motion parallel to E has constant acceleration along a straight line. B: Perpendicular to E results in parabolic motion (like projectile motion). C: Parallel to B means no magnetic force (F=0), so it moves in a straight line, not a helix. D: Perpendicular to B results in uniform circular motion.",
+    "_usage": [
+     265,
+     89
+    ],
+    "_model": "gemini-3.5-flash-lite"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R020",
+   "evidence": "ANS_TYPE: typed multiple-correct but key holds 0 valid letter(s): ['A, B, D']",
+   "verdict": "defect",
+   "repair": "type_mismatch",
+   "edit": {
+    "field": "questionType",
+    "find": "mcq",
+    "replace": "scq"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.8130081133205905,
+   "_p_repair": 0.5518199629394808
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R021",
+  "questionId": "68f21caf941cda588bc04365",
+  "verdict": "defect",
+  "repair": "type_mismatch",
+  "edit": {
+   "field": "questionType",
+   "find": "mcq",
+   "replace": "scq"
+  },
+  "extra_edits": [
+   {
+    "field": "answer",
+    "find": "[\"\", \"B\"]",
+    "replace": "\"B\""
+   }
+  ],
+  "route": "auto_apply",
+  "confidence": 0.93,
+  "evidence": "Typed multiple-correct but exactly one option (B) is correct, confirmed by two independent solves; the key ['', 'B'] is also malformed.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R021 verdict prob 0.55; R021 repair prob 0.49"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/answer_key"
+   ],
+   [
+    "G10 key proof",
+    "pass",
+    "single correct letter confirmed by both solves"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'type_mismatch' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'questionType' is within ['questionType', 'question', 'answer']"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.93 >= 0.9"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Thank you! The question was set as multiple-choice but only one answer was correct. We fixed it to single-choice and the correct answer is B.",
+  "reply_source": "model",
+  "reply_draft": "Thank you! The question was set as multiple-choice but only one answer was correct. We fixed it to single-choice and the correct answer is B.",
+  "reply_problems": [],
+  "audit": {
+   "status": "confirmed",
+   "answer": [
+    "B"
+   ],
+   "stored": [
+    "B"
+   ],
+   "proof": [
+    "solver A=['B']",
+    "solver B=['B']"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "B",
+    "sound": true,
+    "working": "N0=48×10^23, N=6×10^23, ratio=8. τ = t/ln(8) = 3 min / 2.079 = 1.44 min. So answer B.",
+    "_usage": [
+     227,
+     700
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "B",
+    "sound": true,
+    "working": "Given $N/N_0 = 6/48 = 1/8 = (1/2)^3$, so $t = 3 T_{1/2} = 3\\text{ min}$, which gives $T_{1/2} = 1\\text{ min}$. The mean life $\\tau = T_{1/2}/\\ln 2 = 1/0.693 \\approx 1.44\\text{ min}$.",
+    "_usage": [
+     253,
+     118
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R021",
+   "evidence": "ANS_FORMAT, ANS_TYPE",
+   "verdict": "defect",
+   "repair": "type_mismatch",
+   "edit": {
+    "field": "questionType",
+    "find": "mcq",
+    "replace": "scq"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.5521439653034781,
+   "_p_repair": 0.4879363802343102
+  },
+  "escalated": [
+   "R021 verdict prob 0.55",
+   "R021 repair prob 0.49"
+  ]
+ },
+ {
+  "reportId": "R022",
+  "questionId": "61ee6c9d90a1a968a168686b",
+  "verdict": "defect",
+  "repair": "spelling",
+  "edit": {
+   "field": "question",
+   "find": "plexux",
+   "replace": "plexus"
+  },
+  "extra_edits": [],
+  "route": "auto_apply",
+  "confidence": 1.0,
+  "evidence": "The word 'plexux' is present in the question text.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/spelling"
+   ],
+   [
+    "G3 human-only",
+    "pass",
+    "'spelling' is auto-eligible"
+   ],
+   [
+    "G2 scope",
+    "pass",
+    "field 'question' is within ['question', 'solution']"
+   ],
+   [
+    "G4 anchor",
+    "pass",
+    "find occurs exactly once, in plain text"
+   ],
+   [
+    "G5 math",
+    "pass",
+    "0 math node(s) byte-identical"
+   ],
+   [
+    "G7 markup",
+    "pass",
+    "tag structure unchanged"
+   ],
+   [
+    "G6 digits",
+    "pass",
+    "no digit moved"
+   ],
+   [
+    "G6 spelling",
+    "pass",
+    "small word-level change"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "1.00 >= 0.85"
+   ],
+   [
+    "route",
+    "pass",
+    "all guards passed"
+   ]
+  ],
+  "preview": {
+   "question": "<h3><span style=\"color:#000000\">Aggregates of lymphoid tissue present in the distal portion of the small intestine are known as</h3><h3>(A)<span style=\"color:#000000\"> <span style=\"color:#000000\">Villi<br />(B)<span style=\"color:#000000\"> <span style=\"color:#000000\">Peyer&rsquo;s patches<br />(C)<span style=\"color:#000000\"> <span style=\"color:#000000\">Rugae<br />(D)</span></span></span><span style=\"color:#000000\"> </span></span></span><span style=\"color:#000000\">Choroid plexus</span></span></span></h3>"
+  },
+  "duplicate_of": null,
+  "student_reply": "Thanks for the heads-up! The question had a typo: 'plexux' is now 'plexus'. The correct answer is B.",
+  "reply_source": "model",
+  "reply_draft": "Thanks for the heads-up! The question had a typo: 'plexux' is now 'plexus'. The correct answer is B.",
+  "reply_problems": [],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R022",
+   "evidence": "The word 'plexux' is present in the question text.",
+   "verdict": "defect",
+   "repair": "spelling",
+   "edit": {
+    "field": "question",
+    "find": "plexux",
+    "replace": "plexus"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.9884875700578447,
+   "_p_repair": 0.961028249982599
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R023",
+  "questionId": "68ecbacb2ec87a18deba1ad7",
+  "verdict": "defect",
+  "repair": "wrong_chapter",
+  "edit": null,
+  "extra_edits": [],
+  "route": "faculty_review",
+  "confidence": 0.9,
+  "evidence": "Question about absolute refractory period (neural physiology) is filed under Botany chapter \"The Living World\", mismatched topic.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R023 verdict prob 0.62; R023 chapter/syllabus claim needs the strong model"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/wrong_chapter"
+   ],
+   [
+    "G3 human-only",
+    "fail",
+    "'wrong_chapter' is never auto-applied"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.90 >= 0.85"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Thanks for the heads-up! A teacher will check and fix the question's topic and chapter.",
+  "reply_source": "model",
+  "reply_draft": "Thanks for the heads-up! A teacher will check and fix the question's topic and chapter.",
+  "reply_problems": [],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R023",
+   "evidence": "Question: 'The absolute refractory period during an action potential generation is primarily caused by:'",
+   "verdict": "defect",
+   "repair": "wrong_chapter",
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.6204013634420171,
+   "_p_repair": 0.9946434483606478
+  },
+  "escalated": [
+   "R023 verdict prob 0.62",
+   "R023 chapter/syllabus claim needs the strong model"
+  ]
+ },
+ {
+  "reportId": "R024",
+  "questionId": "5fc60508028950133eac8963",
+  "verdict": "no_error",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 0.9,
+  "evidence": "Question asks for frictional force; answer key 20 matches weight 20 N, unit implied by context. No unit required for integer answer.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R024 repair prob 0.76"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "no_error/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "You were asking for the frictional force, which is the force of friction between the body and the wall. The weight of the body is 20 N, and the frictional force is 20 N, so the answer is correct.",
+  "reply_source": "model",
+  "reply_draft": "You were asking for the frictional force, which is the force of friction between the body and the wall. The weight of the body is 20 N, and the frictional force is 20 N, so the answer is correct.",
+  "reply_problems": [],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R024",
+   "evidence": "The question does not state the unit of the frictional force.",
+   "verdict": "defect",
+   "repair": "answer_form",
+   "edit": {
+    "field": "question",
+    "find": "Then the frictional force is equal to",
+    "replace": "Then the frictional force (in N) is equal to"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.9042776959287093,
+   "_p_repair": 0.7623151394191169
+  },
+  "escalated": [
+   "R024 repair prob 0.76"
+  ]
+ },
+ {
+  "reportId": "R025",
+  "questionId": "622df25ab70e4b50e44ff837",
+  "verdict": "defect",
+  "repair": "diagram",
+  "edit": null,
+  "extra_edits": [],
+  "route": "faculty_review",
+  "confidence": 1.0,
+  "evidence": "The question text mentions a figure, but no figure is shown.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/diagram"
+   ],
+   [
+    "G3 human-only",
+    "fail",
+    "'diagram' is never auto-applied"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "1.00 >= 0.85"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Thanks for the heads-up! A teacher will check and fix the missing figure.",
+  "reply_source": "model",
+  "reply_draft": "Thanks for the heads-up! A teacher will check and fix the missing figure.",
+  "reply_problems": [],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R025",
+   "evidence": "The question text mentions a figure, but no figure is shown.",
+   "verdict": "defect",
+   "repair": "diagram",
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.9937050949562386,
+   "_p_repair": 0.9674408469990412
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R026",
+  "questionId": "620e23cecc50543bc7db9186",
+  "verdict": "no_error",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 0.95,
+  "evidence": "Evolution topic; ancestral state inference is part of NEET syllabus; independent solvers confirm answer B is correct.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R026 chapter/syllabus claim needs the strong model"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "no_error/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Thanks for your report! The correct answer is B, as using a distantly related snake as an outgroup can help determine the ancestral state.",
+  "reply_source": "model",
+  "reply_draft": "Thanks for your report! The correct answer is B, as using a distantly related snake as an outgroup can help determine the ancestral state.",
+  "reply_problems": [],
+  "audit": {
+   "status": "confirmed",
+   "answer": "B",
+   "stored": "B",
+   "proof": [
+    "solver A=B",
+    "solver B=B"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "B",
+    "sound": true,
+    "working": "Use a distantly related snake as an outgroup; its forked tongue presence indicates the ancestral state for the ingroup.",
+    "_usage": [
+     263,
+     882
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "B",
+    "sound": true,
+    "working": "To determine the ancestral state (plesiomorphy) of a trait among a clade of closely related species, phylogenetics uses outgroup analysis. Comparing the target species to a more distantly related outgroup species (such as a more distantly related snake) helps identify whether the trait is ancestral or derived.",
+    "_usage": [
+     279,
+     78
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R026",
+   "evidence": "The question is about evolution, which is a topic in the NEET syllabus.",
+   "verdict": "no_error",
+   "repair": null,
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.9540456905714033,
+   "_p_repair": 0.9934911380098533
+  },
+  "escalated": [
+   "R026 chapter/syllabus claim needs the strong model"
+  ]
+ },
+ {
+  "reportId": "R027",
+  "questionId": "6062ec84518e9535e120c422",
+  "verdict": "no_error",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 0.9,
+  "evidence": "Comment is an instruction aimed at the system, not an error report, so it was ignored. Independent solves confirm the stored key.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G12 injection",
+    "pass",
+    "comment looks like an instruction to the system: ignored, no edit possible"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "This box is only for reporting a mistake in a question. If something in this question looks wrong, tell us what and we'll check it.",
+  "reply_source": "template",
+  "reply_draft": "",
+  "reply_problems": [
+   "status uses a fixed template"
+  ],
+  "audit": {
+   "status": "confirmed",
+   "answer": "A",
+   "stored": "A",
+   "proof": [
+    "solver A=A",
+    "solver B=A"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "A",
+    "sound": true,
+    "working": "ΔL=0.19 cm, L0=100 cm, ΔT=100°C → α=ΔL/(L0ΔT)=0.19/(100·100)=1.9×10⁻⁵/°C. β≈3α=5.7×10⁻⁵/°C → option A.",
+    "_usage": [
+     259,
+     938
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "A",
+    "sound": true,
+    "working": "Given $L_0 = 100$ cm, $\\Delta T = 100 ^\\circ\\text{C}$, $\\Delta L = 0.19$ cm. Linear expansion coefficient $\\alpha = \\frac{\\Delta L}{L_0 \\Delta T} = \\frac{0.19}{100 \\times 100} = 1.9 \\times 10^{-5} /^\\circ\\text{C}$. Cubical expansion coefficient $\\gamma = 3\\alpha = 3 \\times 1.9 \\times 10^{-5} = 5.7 \\times 10^{-5} /^\\circ\\text{C}$.",
+    "_usage": [
+     285,
+     171
+    ],
+    "_model": "gemini-3.5-flash-lite"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R027",
+   "evidence": "comment withheld",
+   "verdict": "not_actionable",
+   "repair": null,
+   "edit": null,
+   "confidence": 0.0,
+   "_p_verdict": 0.8052709293401936,
+   "_p_repair": 0.9952169458099865
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R028",
+  "questionId": "6956d7bb23cb221e570d6013",
+  "verdict": "no_error",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 1.0,
+  "evidence": "The solution shows that the correct answer is B.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "no_error/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "We solved this again from scratch and the given answer holds. Tell us the step where your answer differs and we'll go through it with you.",
+  "reply_source": "template",
+  "reply_draft": "You got the right answer, B, by setting the range and height equal and solving for theta. Good work!",
+  "reply_problems": [
+   "tells the student they are right (STUDENT_WRONG)"
+  ],
+  "audit": {
+   "status": "confirmed",
+   "answer": "B",
+   "stored": "B",
+   "proof": [
+    "solver A=B",
+    "solver B=B"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "B",
+    "sound": true,
+    "working": "Using R = u^2 sin2θ/g and H = u^2 sin^2θ/(2g), set R=H → sin2θ = sin^2θ/2 → 2 sinθ cosθ = sin^2θ/2 → 4 cosθ = sinθ → tanθ = 4 → θ = tan^{-1}(4).",
+    "_usage": [
+     221,
+     1191
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "B",
+    "sound": true,
+    "working": "Horizontal range $R = \\frac{u^2 \\sin 2\\theta}{g} = \\frac{2 u^2 \\sin\\theta \\cos\\theta}{g}$ and maximum height $H = \\frac{u^2 \\sin^2\\theta}{2g}$. Setting $R = H$ gives $2 \\sin\\theta \\cos\\theta = \\frac{\\sin^2\\theta}{2} \\implies \\tan\\theta = 4 \\implies \\theta = \\tan^{-1}(4)$.",
+    "_usage": [
+     235,
+     129
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R028",
+   "evidence": "The solution shows that the correct answer is B.",
+   "verdict": "no_error",
+   "repair": null,
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.9718119658571107,
+   "_p_repair": 0.997448059051682
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R029",
+  "questionId": "68e8734442c06737d6e56da4",
+  "verdict": "no_error",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 0.9,
+  "evidence": "The student's solution is not shown, and the stored solution is correct.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "no_error/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "You were close, but the right answer is A. The key is to use the weight to find the mass, then solve for the force in each case, and finally for the coefficient of friction.",
+  "reply_source": "model",
+  "reply_draft": "You were close, but the right answer is A. The key is to use the weight to find the mass, then solve for the force in each case, and finally for the coefficient of friction.",
+  "reply_problems": [],
+  "audit": {
+   "status": "confirmed",
+   "answer": "A",
+   "stored": "A",
+   "proof": [
+    "solver A=A",
+    "solver B=A"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "A",
+    "sound": true,
+    "working": "Weight 100 N → m=10 kg. First case: F−µ·100=10 → F=10+100µ. Second: 2F−µ·100=100 → 2(10+100µ)−100µ=100 → 100µ=80 → µ=0.8 (Option A).",
+    "_usage": [
+     246,
+     897
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "A",
+    "sound": true,
+    "working": "Mass $m = W/g = 100/10 = 10\\text{ kg}$. Friction force $f = \\mu W = 100\\mu$. Equations of motion: $F - 100\\mu = 10(1) = 10$ and $2F - 100\\mu = 10(10) = 100$. Subtracting gives $F = 90\\text{ N}$. Substituting $F$ yields $100\\mu = 80 \\implies \\mu = 0.8$.",
+    "_usage": [
+     265,
+     146
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R029",
+   "evidence": "The student's solution is not shown, and the stored solution is correct.",
+   "verdict": "no_error",
+   "repair": null,
+   "edit": null,
+   "confidence": 0.9,
+   "_p_verdict": 0.9990448546919485,
+   "_p_repair": 0.9994275272550865
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R030",
+  "questionId": "6956d7e988d7701e5617bd3e",
+  "verdict": "no_error",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 1.0,
+  "evidence": "The solution shows the correct answer.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "no_error/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "We solved this again from scratch and the given answer holds. Tell us the step where your answer differs and we'll go through it with you.",
+  "reply_source": "template",
+  "reply_draft": "The question is correct. The solution shows the correct answer. The key working from an independent re-solve is: T=16s ⇒ ω=π/8 rad/s. v=Aωcos(ωt). At t=2, cos(π/4)=1/√2, v=Aπ/(8√2)=π ⇒ A=8√2. Hence amplitude =8√2, corresponding to option D.",
+  "reply_problems": [
+   "longer than 3 sentences"
+  ],
+  "audit": {
+   "status": "confirmed",
+   "answer": "D",
+   "stored": "D",
+   "proof": [
+    "solver A=D",
+    "solver B=D"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "D",
+    "sound": true,
+    "working": "T=16s ⇒ ω=π/8 rad/s. v=Aωcos(ωt). At t=2, cos(π/4)=1/√2, v=Aπ/(8√2)=π ⇒ A=8√2. Hence amplitude =8√2, corresponding to option D.",
+    "_usage": [
+     255,
+     2750
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "D",
+    "sound": true,
+    "working": "For SHM starting from mean position, $v(t) = A\\omega\\cos(\\omega t)$. Here, $T = 16\\text{ s} \\implies \\omega = \\frac{\\pi}{8}\\text{ rad/s}$. Given $v(2) = \\pi\\text{ m/s}$, we have $\\pi = A\\left(\\frac{\\pi}{8}\\right)\\cos\\left(\\frac{\\pi}{4}\\right) = A\\frac{\\pi}{8\\sqrt{2}}$. Thus, $A = 8\\sqrt{2}\\text{ m}$.",
+    "_usage": [
+     274,
+     150
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R030",
+   "evidence": "The solution shows the correct answer.",
+   "verdict": "no_error",
+   "repair": null,
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.8983983878746671,
+   "_p_repair": 0.9961184119142369
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R031",
+  "questionId": "68dea619d0cda73d07e93aee",
+  "verdict": "no_error",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 1.0,
+  "evidence": "The student's answer is not the stored answer.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "no_error/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Humne ise dobara solve kiya aur diya hua answer sahi hai. Aapka answer kis step par alag aaya, bataoge? Hum saath mein dekh lenge.",
+  "reply_source": "template",
+  "reply_draft": "Dhanyavaad! Aapne jo likha, usmein ek galti thi. The correct answer is 4 seconds, because the wheels turn at different speeds, so the faster one must turn 2π radians more than the slower one to realign the dots.",
+  "reply_problems": [
+   "value/unit not in verified facts: ['4 seconds']"
+  ],
+  "audit": {
+   "status": "confirmed",
+   "answer": "4",
+   "stored": "4",
+   "proof": [
+    "solver A=4",
+    "solver B=4"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "4",
+    "sound": true,
+    "working": "θ1=½α1t², θ2=½α2t², Δθ=θ1-θ2=(π/8)t². Set Δθ=2π => t²=16 => t=4 s.",
+    "_usage": [
+     240,
+     1224
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "4",
+    "sound": true,
+    "working": "Let $\\theta_1 = \\frac{1}{2}\\alpha_1 t^2$ and $\\theta_2 = \\frac{1}{2}\\alpha_2 t^2$. They align again when $\\theta_1 - \\theta_2 = 2\\pi n$ for $n=1$. Thus, $\\frac{1}{2}(\\frac{\\pi}{2} - \\frac{\\pi}{4})t^2 = 2\\pi \\implies \\frac{1}{8}\\pi t^2 = 2\\pi \\implies t^2 = 16 \\implies t = 4$ seconds.",
+    "_usage": [
+     249,
+     156
+    ],
+    "_model": "gemini-3.5-flash-lite"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R031",
+   "evidence": "The student's answer is not the stored answer.",
+   "verdict": "no_error",
+   "repair": null,
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.896458717965482,
+   "_p_repair": 0.9973059947627013
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R032",
+  "questionId": "68dea7c2387eea3d0d95f9bb",
+  "verdict": "no_error",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 1.0,
+  "evidence": "The solution ends in 0.08m, which is 8cm.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "no_error/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Humne ise dobara solve kiya aur diya hua answer sahi hai. Aapka answer kis step par alag aaya, bataoge? Hum saath mein dekh lenge.",
+  "reply_source": "template",
+  "reply_draft": "Dhanyavaad! Aapne sahi kaha ki kuch galat hai. Lekin aapke hisaab se sahi jawab 8cm hai. Yeh sahi hai, kyunki extra OPD Δ=(n1−1)t1−(n2−1)t2=0.5×2mm−0.4×1.5mm=1mm−0.6mm=0.4mm=0.0004m aur shift y=ΔL/d=0.0004×1/0.005=0.08m=8cm hota hai.",
+  "reply_problems": [
+   "longer than 3 sentences",
+   "tells the student they are right (STUDENT_WRONG)"
+  ],
+  "audit": {
+   "status": "confirmed",
+   "answer": "8",
+   "stored": "8",
+   "proof": [
+    "solver A=8",
+    "solver B=8"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "8",
+    "sound": true,
+    "working": "Compute extra OPD Δ=(n1−1)t1−(n2−1)t2=0.5×2mm−0.4×1.5mm=1mm−0.6mm=0.4mm=0.0004m. Shift y=ΔL/d=0.0004×1/0.005=0.08m=8cm.",
+    "_usage": [
+     209,
+     1821
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "8",
+    "sound": true,
+    "working": "Path difference introduced by the slabs is $\\Delta x = (\\mu_1 - 1)t_1 - (\\mu_2 - 1)t_2 = (1.5 - 1)(2\\text{ mm}) - (1.4 - 1)(1.5\\text{ mm}) = 0.4\\text{ mm}$. Shift of central maxima $y = \\frac{\\Delta x \\cdot D}{d} = \\frac{0.4\\text{ mm} \\times 1000\\text{ mm}}{5\\text{ mm}} = 80\\text{ mm} = 8\\text{ cm}$.",
+    "_usage": [
+     216,
+     162
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R032",
+   "evidence": "The solution ends in 0.08m, which is 8cm.",
+   "verdict": "no_error",
+   "repair": null,
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.9065995616366929,
+   "_p_repair": 0.9966486138734616
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R033",
+  "questionId": "68dea715387eea3d0d95f790",
+  "verdict": "no_error",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 0.95,
+  "evidence": "Surface area = 6×(7.203)² = 311.299254 m²; rounded to 4 sig figs = 311.3; 10×311.3 = 3113, matching stored answer.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R033 verdict prob 0.76"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "no_error/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "You rounded the surface area to 4 significant figures, which gives 311.3 m². 10 times this is 3113, the correct answer.",
+  "reply_source": "model",
+  "reply_draft": "You rounded the surface area to 4 significant figures, which gives 311.3 m². 10 times this is 3113, the correct answer.",
+  "reply_problems": [],
+  "audit": {
+   "status": "confirmed",
+   "answer": "3113",
+   "stored": "3113",
+   "proof": [
+    "solver A=3113",
+    "solver B=3113"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "3113",
+    "sound": true,
+    "working": "Side=7.203 m (4 sf). Area=6·7.203²=311.299254 m². Round to 4 sf →311.3 m². 10A=3113.",
+    "_usage": [
+     190,
+     2629
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "3113",
+    "sound": true,
+    "working": "Side of the cube $a = 7.203\\text{ m}$ (4 significant figures).\nTotal surface area $A = 6a^2 = 6 \\times (7.203)^2 = 311.299254\\text{ m}^2$.\nRounding to 4 significant figures gives $A = 311.3\\text{ m}^2$.\nThus, $10A = 10 \\times 311.3 = 3113$.",
+    "_usage": [
+     200,
+     137
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R033",
+   "evidence": "Solution: [M1: 311.299=311.3 m^2]",
+   "verdict": "no_error",
+   "repair": null,
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.7614733987162687,
+   "_p_repair": 0.9899909344664737
+  },
+  "escalated": [
+   "R033 verdict prob 0.76"
+  ]
+ },
+ {
+  "reportId": "R034",
+  "questionId": "695ee00b88d7701e561aabc5",
+  "verdict": "defect",
+  "repair": "unsound",
+  "edit": null,
+  "extra_edits": [],
+  "route": "faculty_review",
+  "confidence": 0.95,
+  "evidence": "Assertion A false: two equal-amplitude waves with φ=π/2 give I=2I₀, not I₀. Reason R false: resultant intensity is not simply sum for non‑zero phase. No option matches both false, so question unsound.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R034 repair prob 0.46"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/unsound"
+   ],
+   [
+    "G3 human-only",
+    "fail",
+    "'unsound' is never auto-applied"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.95 >= 0.85"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "A teacher will check and fix the question. Thanks for your help!",
+  "reply_source": "model",
+  "reply_draft": "A teacher will check and fix the question. Thanks for your help!",
+  "reply_problems": [],
+  "audit": {
+   "status": "disputed",
+   "answer": null,
+   "stored": "D",
+   "proof": [
+    "solver A=None",
+    "solver B='C'"
+   ]
+  },
+  "solves": [
+   {
+    "answer": null,
+    "sound": false,
+    "working": "Both A and R are false; A claims intensity equals one wave for π/2, but actual intensity is double. R claims intensity always sum for non-zero phase difference, which is false (e.g., φ=π). No option matches, so unsound.",
+    "_usage": [
+     266,
+     2071
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "C",
+    "sound": true,
+    "working": "Resultant intensity $I = I_1 + I_2 + 2\\sqrt{I_1 I_2}\\cos\\phi$. For $I_1=I_2=I_0$ and $\\phi=\\pi/2$, $I = 2I_0 + 2I_0\\cos(\\pi/2) = 2I_0 \\neq I_0$. Thus, assertion A is false? Wait: Resultant intensity for two waves of amplitude $A$ and phase difference $\\pi/2$: $I = 4I_0 \\cos^2(\\pi/4) = 2I_0$. Wait, amplitude $R = \\sqrt{A^2+A^2} = \\sqrt{2}A$, so intensity is $2I_0$. But the statement says 'resulting intensity is equal to the intensity of one wave', which is false (it is twice). Let's re-verify: $I = I_0 + I_0 + 2I_0\\cos(\\pi/2) = 2I_0$. Thus A is false. Reason R is also false because intensity is not always just the sum (interference term exists). Thus both A and R are false. Wait, option C says A is true, but R is false. Let's check if the question implies A is false. Since A is false and R is false, let's check options: (A), (B), (C), (D). None say both false. Wait, $I = I_0$ when phase difference is $2\\pi/3$. For $\\pi/2$, $I = 2I_0$. Thus A is false. Let's re-read: Reason states 'resultant intensity is always the sum of individual intensities if the phase difference is non-zero', which is completely false. Thus R is false. If A is false and R is false, let's look for unsound or closest option. Wait, if A is false and R is false, maybe A is false, R is false. But standard options don't have it. Let's check if A is true: $I = 2I_0$, intensity of one wave is $I_0$, so A is false. Wait, sometimes people confuse amplitude and intensity. If amplitude is equal, resultant amplitude is $\\sqrt{2}A$, intensity is $2I_0$. So A is false. R is false. Question is unsound.",
+    "_usage": [
+     283,
+     542
+    ],
+    "_model": "gemini-3.5-flash-lite"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R034",
+   "evidence": "The solution shows that the intensity is the same as that of one wave.",
+   "verdict": "defect",
+   "repair": "answer_key",
+   "edit": {
+    "field": "answer",
+    "find": "D",
+    "replace": "C"
+   },
+   "confidence": 1.0,
+   "_p_verdict": 0.8787784331695566,
+   "_p_repair": 0.45852197060183725
+  },
+  "escalated": [
+   "R034 repair prob 0.46"
+  ]
+ },
+ {
+  "reportId": "R035",
+  "questionId": "66fe9dbe22132e5a70a3e579",
+  "verdict": "no_error",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 0.95,
+  "evidence": "Relaxin softens pelvic ligaments; inhibin suppresses FSH. They act independently, not antagonistically. Other pairs are antagonistic. Answer D is correct.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R035 verdict prob 0.50; R035 repair prob 0.57; R035 triage wanted a key change but solves confirm the key"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "no_error/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "We solved this again from scratch and the given answer holds. Tell us the step where your answer differs and we'll go through it with you.",
+  "reply_source": "template",
+  "reply_draft": "You're right that relaxin and inhibin are not antagonistic. They act independently. Relaxin softens pelvic ligaments, while inhibin suppresses FSH.",
+  "reply_problems": [
+   "tells the student they are right (STUDENT_WRONG)"
+  ],
+  "audit": {
+   "status": "confirmed",
+   "answer": "D",
+   "stored": "D",
+   "proof": [
+    "solver A=D",
+    "solver B=D"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "D",
+    "sound": true,
+    "working": "PTH and calcitonin, insulin and glucagon, aldosterone and ANF are antagonistic. Relaxin relaxes pelvic ligaments; inhibin suppresses FSH. They do not oppose each other. Hence pair D is not antagonistic.",
+    "_usage": [
+     195,
+     962
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "D",
+    "sound": true,
+    "working": "Parathormone (raises Ca2+) and Calcitonin (lowers Ca2+) are antagonistic. Insulin (lowers blood glucose) and Glucagon (raises blood glucose) are antagonistic. Aldosterone (retains Na+) and ANF (excretes Na+) are antagonistic. Relaxin (relaxes pubic symphysis during childbirth) and Inhibin (inhibits FSH secretion) have completely different functions and are not antagonistic.",
+    "_usage": [
+     210,
+     107
+    ],
+    "_model": "gemini-3.5-flash-lite"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R035",
+   "evidence": "The solution says 'Inhibin is a hormone secreted by granulosa cells of the ovary which inhibit the secretion of FSH (Follicle Stimulating Hormone) whereas relaxin produced by ovary and placenta at the time of childbirth to softens the ligament in the pelvis and widens the cervix.'",
+   "verdict": "defect",
+   "repair": "answer_key",
+   "edit": {
+    "field": "answer",
+    "find": "D",
+    "replace": "C"
+   },
+   "confidence": 0.9,
+   "_p_verdict": 0.4977410087440397,
+   "_p_repair": 0.5675379838341915
+  },
+  "escalated": [
+   "R035 verdict prob 0.50",
+   "R035 repair prob 0.57",
+   "R035 triage wanted a key change but solves confirm the key"
+  ]
+ },
+ {
+  "reportId": "R036",
+  "questionId": "60ca4feb6420652745f55522",
+  "verdict": "display_issue",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 0.9,
+  "evidence": "Stored question lists options A–D; student reports they appear cut off on a phone screen.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R036 verdict prob 0.82"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "display_issue/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "The question itself is fine; this is a display problem on your screen. Try rotating to landscape or updating the app.",
+  "reply_source": "template",
+  "reply_draft": "",
+  "reply_problems": [
+   "status uses a fixed template"
+  ],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R036",
+   "evidence": "Option (C) is cut off in the question text.",
+   "verdict": "defect",
+   "repair": "option_repair",
+   "edit": {
+    "field": "question",
+    "find": "100 N",
+    "replace": "100 N\n(C) 99 N"
+   },
+   "confidence": 0.9,
+   "_p_verdict": 0.8195650387548977,
+   "_p_repair": 0.9950563940425009
+  },
+  "escalated": [
+   "R036 verdict prob 0.82"
+  ]
+ },
+ {
+  "reportId": "R037",
+  "questionId": "68c9ae5afb6b2f16e2d43b1c",
+  "verdict": "display_issue",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 0.9,
+  "evidence": "Student reports slow loading; question content and answer are correct.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R037 verdict prob 0.81"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "display_issue/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "The question itself is fine; this is a display problem on your screen. Try rotating to landscape or updating the app.",
+  "reply_source": "template",
+  "reply_draft": "",
+  "reply_problems": [
+   "status uses a fixed template"
+  ],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R037",
+   "evidence": "The question loads without delay.",
+   "verdict": "display_issue",
+   "repair": null,
+   "edit": null,
+   "confidence": 0.9,
+   "_p_verdict": 0.8115015272667463,
+   "_p_repair": 0.9855239059471632
+  },
+  "escalated": [
+   "R037 verdict prob 0.81"
+  ]
+ },
+ {
+  "reportId": "R038",
+  "questionId": "68f21df0941cda588bc0470b",
+  "verdict": "app_issue",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 0.9,
+  "evidence": "Stored answer A is correct (p∝√KE). Student reports clicking A but system saved B, indicating an app recording issue.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R038 verdict prob 0.79"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "app_issue/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "The question itself is fine; this looks like an app problem. Please update the app and try again; we've passed it to the app team.",
+  "reply_source": "template",
+  "reply_draft": "",
+  "reply_problems": [
+   "status uses a fixed template"
+  ],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R038",
+   "evidence": "The stored answer is A, not B.",
+   "verdict": "app_issue",
+   "repair": null,
+   "edit": null,
+   "confidence": 0.9,
+   "_p_verdict": 0.7940481398808823,
+   "_p_repair": 0.9905900750579365
+  },
+  "escalated": [
+   "R038 verdict prob 0.79"
+  ]
+ },
+ {
+  "reportId": "R039",
+  "questionId": "68c801bc1b1dbc16dc93bf2b",
+  "verdict": "language_mode",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 1.0,
+  "evidence": "The question is in English.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "language_mode/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Yeh question abhi sirf English mein available hai. Hindi version ke liye request note kar li hai.",
+  "reply_source": "template",
+  "reply_draft": "",
+  "reply_problems": [
+   "status uses a fixed template"
+  ],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R039",
+   "evidence": "The question is in English.",
+   "verdict": "language_mode",
+   "repair": null,
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.865516630193432,
+   "_p_repair": 0.998674126448047
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R040",
+  "questionId": "6264197209f4fd65f58f5707",
+  "verdict": "no_error",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 0.95,
+  "evidence": "Question asks which food prevents vitamin A deficiency blindness; Golden rice (option C) produces beta‑carotene per solution; independent solvers also chose C; stored answer is C.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R040 verdict prob 0.50; R040 repair prob 0.52; R040 triage wanted a key change but solves confirm the key"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "no_error/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "We solved this again from scratch and the given answer holds. Tell us the step where your answer differs and we'll go through it with you.",
+  "reply_source": "template",
+  "reply_draft": "You were right to pick C. Golden rice is biofortified with beta-carotene, which the body converts to vitamin A, preventing vitamin A deficiency blindness.",
+  "reply_problems": [
+   "tells the student they are right (STUDENT_WRONG)"
+  ],
+  "audit": {
+   "status": "confirmed",
+   "answer": "C",
+   "stored": "C",
+   "proof": [
+    "solver A=C",
+    "solver B=C"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "C",
+    "sound": true,
+    "working": "Golden rice is biofortified with beta‑carotene (provitamin A), which the body converts to vitamin A, preventing vitamin A deficiency blindness. Other options lack significant vitamin A.",
+    "_usage": [
+     189,
+     529
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "C",
+    "sound": true,
+    "working": "Golden rice is a genetically modified crop engineered to biosynthesize beta-carotene, a precursor of vitamin A, in its edible parts. Consuming Golden rice helps prevent vitamin A deficiency, which is a major cause of childhood blindness (xerophthalmia) in developing nations.",
+    "_usage": [
+     202,
+     70
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R040",
+   "evidence": "The question asks for the food that can prevent blindness associated with vitamin A deficiency.",
+   "verdict": "defect",
+   "repair": "answer_key",
+   "edit": {
+    "field": "answer",
+    "find": "C",
+    "replace": "A"
+   },
+   "confidence": 0.9,
+   "_p_verdict": 0.4990146624474926,
+   "_p_repair": 0.520583412085399
+  },
+  "escalated": [
+   "R040 verdict prob 0.50",
+   "R040 repair prob 0.52",
+   "R040 triage wanted a key change but solves confirm the key"
+  ]
+ },
+ {
+  "reportId": "R041",
+  "questionId": "6208e298fa399567e0878700",
+  "verdict": "not_actionable",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 0.99,
+  "evidence": "The comment is empty or unintelligible.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "not_actionable/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Thanks for reporting! Could you tell us in one line what exactly looked wrong? We'll check it right away.",
+  "reply_source": "template",
+  "reply_draft": "",
+  "reply_problems": [
+   "status uses a fixed template"
+  ],
+  "audit": {
+   "status": "confirmed",
+   "answer": "A",
+   "stored": "A",
+   "proof": [
+    "solver A=A",
+    "solver B=A"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "A",
+    "sound": true,
+    "working": "Julius von Sachs demonstrated that plants produce a carbohydrate (glucose/starch) during photosynthesis.",
+    "_usage": [
+     177,
+     538
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "A",
+    "sound": true,
+    "working": "According to NCERT Class 11 Biology, Julius von Sachs provided evidence for the production of glucose when plants grow, showing that glucose is usually stored as starch inside chloroplasts present in the green parts of plants.",
+    "_usage": [
+     189,
+     59
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R041",
+   "evidence": "The comment is empty or unintelligible.",
+   "verdict": "not_actionable",
+   "repair": null,
+   "edit": null,
+   "confidence": 0.99,
+   "_p_verdict": 0.995286731176945,
+   "_p_repair": 0.9851821165515781
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R042",
+  "questionId": "63c7cce12981ed154ee92c94",
+  "verdict": "defect",
+  "repair": "wrong_chapter",
+  "edit": null,
+  "extra_edits": [],
+  "route": "faculty_review",
+  "confidence": 0.95,
+  "evidence": "Question about displacement current in a capacitor (electromagnetism) but chapter listed as \"Geometrical optics and optical instruments\".",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "R042 verdict prob 0.73; R042 chapter/syllabus claim needs the strong model"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "defect/wrong_chapter"
+   ],
+   [
+    "G3 human-only",
+    "fail",
+    "'wrong_chapter' is never auto-applied"
+   ],
+   [
+    "G11 confidence",
+    "pass",
+    "0.95 >= 0.85"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "Thanks for the heads-up! A teacher will check and fix the chapter this question is filed under.",
+  "reply_source": "model",
+  "reply_draft": "Thanks for the heads-up! A teacher will check and fix the chapter this question is filed under.",
+  "reply_problems": [],
+  "audit": null,
+  "solves": null,
+  "triage_raw": {
+   "reportId": "R042",
+   "evidence": "The question is about a capacitor, which is a topic in the chapter 'Electrostatics'.",
+   "verdict": "defect",
+   "repair": "wrong_chapter",
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.7280074043694624,
+   "_p_repair": 0.9948648626296966
+  },
+  "escalated": [
+   "R042 verdict prob 0.73",
+   "R042 chapter/syllabus claim needs the strong model"
+  ]
+ },
+ {
+  "reportId": "R043",
+  "questionId": "636283dbe3770c24f866e6d6",
+  "verdict": "no_error",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 1.0,
+  "evidence": "The solution shows that the surface density of the bigger drop is 4 times that of the smaller drop.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "no_error/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "You were close. The surface density of the bigger drop is 4 times that of the smaller drop, so the ratio is 4:1. The correct answer is B.",
+  "reply_source": "model",
+  "reply_draft": "You were close. The surface density of the bigger drop is 4 times that of the smaller drop, so the ratio is 4:1. The correct answer is B.",
+  "reply_problems": [],
+  "audit": {
+   "status": "confirmed",
+   "answer": "B",
+   "stored": "B",
+   "proof": [
+    "solver A=B",
+    "solver B=B"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "B",
+    "sound": true,
+    "working": "Total charge = 64×5μC. Volume conservation gives big radius = 0.02×4=0.08 m. Surface area ratio = (0.02²)/(0.08²)=1/16. σ ratio = 64×(1/16)=4 → 4:1. Option B.",
+    "_usage": [
+     236,
+     1532
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "B",
+    "sound": true,
+    "working": "Volume conservation: $64 \\times \\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi R^3 \\Rightarrow R = 4r$. Charge on big drop: $Q = 64q$. Surface charge density $\\sigma = \\frac{\\text{charge}}{\\text{area}}$. Ratio $\\frac{\\sigma_B}{\\sigma_S} = \\frac{Q/4\\pi R^2}{q/4\\pi r^2} = \\frac{64q}{q} \\times \\frac{r^2}{(4r)^2} = 64 \\times \\frac{1}{16} = 4:1$.",
+    "_usage": [
+     253,
+     170
+    ],
+    "_model": "gemini-3.5-flash-lite"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R043",
+   "evidence": "The solution shows that the surface density of the bigger drop is 4 times that of the smaller drop.",
+   "verdict": "no_error",
+   "repair": null,
+   "edit": null,
+   "confidence": 1.0,
+   "_p_verdict": 0.9215834196808826,
+   "_p_repair": 0.9974609867605169
+  },
+  "escalated": null
+ },
+ {
+  "reportId": "R044",
+  "questionId": "68dea577d0cda73d07e9391c",
+  "verdict": "no_error",
+  "repair": null,
+  "edit": null,
+  "extra_edits": [],
+  "route": "no_change",
+  "confidence": 0.9,
+  "evidence": "The student's answer is 22 V, but the stored solution is correct.",
+  "guards": [
+   [
+    "escalation",
+    "note",
+    "cheap pass was confident; no second opinion needed"
+   ],
+   [
+    "G1 schema",
+    "pass",
+    "no_error/None"
+   ]
+  ],
+  "preview": {},
+  "duplicate_of": null,
+  "student_reply": "You were close! The potential at P is 22 V, but at S it is 8 V, so the difference is 14 V.",
+  "reply_source": "model",
+  "reply_draft": "You were close! The potential at P is 22 V, but at S it is 8 V, so the difference is 14 V.",
+  "reply_problems": [],
+  "audit": {
+   "status": "confirmed",
+   "answer": "14",
+   "stored": "14",
+   "proof": [
+    "solver A=14",
+    "solver B=14"
+   ]
+  },
+  "solves": [
+   {
+    "answer": "14",
+    "sound": true,
+    "working": "Uniform sphere: V(R)=Q/(4πε0R)=16V. Inside: V(r)=Q/(8πε0R³)(3R²−r²). At r=R/2, V=11/8*16=22V. Outside: V(r)=Q/(4πε0r). At r=2R, V=1/2*16=8V. ΔV=V(P)−V(S)=22−8=14V.",
+    "_usage": [
+     245,
+     1771
+    ],
+    "_model": "command-a-plus-05-2026"
+   },
+   {
+    "answer": "14",
+    "sound": true,
+    "working": "Given $V(R) = \\frac{kQ}{R} = 16\\text{ V}$. At $r_S = 2R$, potential $V_S = \\frac{kQ}{2R} = 8\\text{ V}$. At $r_P = R/2$, inside potential $V_P = \\frac{kQ}{2R^3}(3R^2 - r_P^2) = \\frac{kQ}{R}\\left(\\frac{11}{8}\\right) = 22\\text{ V}$. Potential difference $V_P - V_S = 22 - 8 = 14\\text{ V}$.",
+    "_usage": [
+     255,
+     169
+    ],
+    "_model": "gemini-3.5-flash"
+   }
+  ],
+  "triage_raw": {
+   "reportId": "R044",
+   "evidence": "The student's answer is 22 V, but the stored solution is correct.",
+   "verdict": "no_error",
+   "repair": null,
+   "edit": null,
+   "confidence": 0.9,
+   "_p_verdict": 0.9995364907636112,
+   "_p_repair": 0.9986144453683858
+  },
+  "escalated": null
+ }
+]
