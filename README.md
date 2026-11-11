@@ -180,7 +180,7 @@ The console works **without any API key**: it loads the precomputed `results_ful
 
 ## 10. Deploy
 
-One service: FastAPI serves the built console. `render.yaml` is included (always-on plan with a 1 GB disk so teacher decisions survive restarts). Set `COHERE_API_KEY` (only the chat needs it) and `ADMIN_KEY` (unlocks "Reset demo data"; without it, reset only works from the server's own machine) in the service environment. Free tiers sleep or lose data on restart, so they are not suitable for a 7-day link. If the key runs out, everything except the chat still works from the precomputed results.
+One service: FastAPI serves the built console. `render.yaml` is included (always-on plan with a 1 GB disk so teacher decisions survive restarts). Set `GEMINI_API_KEY` (primary chat model), `COHERE_API_KEY` (secondary) and optionally `GROQ_API_KEY` (third) and `ADMIN_KEY` (unlocks "Reset demo data"; without it, reset only works from the server's own machine) in the service environment. Free tiers sleep or lose data on restart, so they are not suitable for a 7-day link. If the key runs out, everything except the chat still works from the precomputed results.
 
 ## 11. Honest limits
 
