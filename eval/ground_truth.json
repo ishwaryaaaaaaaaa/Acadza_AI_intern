@@ -1,0 +1,225 @@
+{
+ "_note": "Hand-derived by me from reading each question; NOT Acadza's official truth. R020 repair label and R009/R010 route are my judgement calls.",
+ "labels": {
+  "R005": {
+   "verdict": "defect",
+   "repair": "answer_key",
+   "route": "auto_apply"
+  },
+  "R004": {
+   "verdict": "defect",
+   "repair": "answer_key",
+   "route": "auto_apply"
+  },
+  "R001": {
+   "verdict": "defect",
+   "repair": "answer_key",
+   "route": "auto_apply"
+  },
+  "R002": {
+   "verdict": "defect",
+   "repair": "answer_key",
+   "route": "auto_apply"
+  },
+  "R003": {
+   "verdict": "defect",
+   "repair": "answer_key",
+   "route": "auto_apply"
+  },
+  "R020": {
+   "verdict": "defect",
+   "repair": "answer_key",
+   "route": "auto_apply"
+  },
+  "R021": {
+   "verdict": "defect",
+   "repair": "type_mismatch",
+   "route": "auto_apply"
+  },
+  "R018": {
+   "verdict": "defect",
+   "repair": "solution_fix",
+   "route": "auto_apply"
+  },
+  "R019": {
+   "verdict": "defect",
+   "repair": "solution_fix",
+   "route": "auto_apply"
+  },
+  "R016": {
+   "verdict": "defect",
+   "repair": "solution_fix",
+   "route": "auto_apply"
+  },
+  "R007": {
+   "verdict": "defect",
+   "repair": "stem_data",
+   "route": "auto_apply"
+  },
+  "R008": {
+   "verdict": "defect",
+   "repair": "stem_data",
+   "route": "auto_apply"
+  },
+  "R006": {
+   "verdict": "defect",
+   "repair": "stem_data",
+   "route": "auto_apply"
+  },
+  "R024": {
+   "verdict": "defect",
+   "repair": "answer_form",
+   "route": "auto_apply"
+  },
+  "R011": {
+   "verdict": "defect",
+   "repair": "option_repair",
+   "route": "auto_apply"
+  },
+  "R014": {
+   "verdict": "defect",
+   "repair": "markup_leak",
+   "route": "auto_apply"
+  },
+  "R013": {
+   "verdict": "defect",
+   "repair": "exam_reference",
+   "route": "auto_apply"
+  },
+  "R022": {
+   "verdict": "defect",
+   "repair": "spelling",
+   "route": "auto_apply"
+  },
+  "R012": {
+   "verdict": "defect",
+   "repair": "spelling",
+   "route": "auto_apply"
+  },
+  "R009": {
+   "verdict": "defect",
+   "repair": "option_repair",
+   "route": "faculty_review"
+  },
+  "R010": {
+   "verdict": "defect",
+   "repair": "option_repair",
+   "route": "faculty_review"
+  },
+  "R015": {
+   "verdict": "defect",
+   "repair": "identical_options",
+   "route": "faculty_review"
+  },
+  "R025": {
+   "verdict": "defect",
+   "repair": "diagram",
+   "route": "faculty_review"
+  },
+  "R034": {
+   "verdict": "defect",
+   "repair": "unsound",
+   "route": "faculty_review"
+  },
+  "R042": {
+   "verdict": "defect",
+   "repair": "wrong_chapter",
+   "route": "faculty_review"
+  },
+  "R023": {
+   "verdict": "defect",
+   "repair": "wrong_chapter",
+   "route": "faculty_review"
+  },
+  "R026": {
+   "verdict": "defect",
+   "repair": "syllabus",
+   "route": "faculty_review"
+  },
+  "R017": {
+   "verdict": "already_fixed",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R033": {
+   "verdict": "no_error",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R031": {
+   "verdict": "no_error",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R035": {
+   "verdict": "no_error",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R029": {
+   "verdict": "no_error",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R043": {
+   "verdict": "no_error",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R044": {
+   "verdict": "no_error",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R028": {
+   "verdict": "no_error",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R030": {
+   "verdict": "no_error",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R032": {
+   "verdict": "no_error",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R040": {
+   "verdict": "no_error",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R027": {
+   "verdict": "no_error",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R036": {
+   "verdict": "display_issue",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R037": {
+   "verdict": "display_issue",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R038": {
+   "verdict": "app_issue",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R039": {
+   "verdict": "language_mode",
+   "repair": null,
+   "route": "no_change"
+  },
+  "R041": {
+   "verdict": "not_actionable",
+   "repair": null,
+   "route": "no_change"
+  }
+ }
+}
