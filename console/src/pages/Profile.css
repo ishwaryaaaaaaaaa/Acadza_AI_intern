@@ -1,0 +1,429 @@
+.pf {
+  padding: 10px 16px 28px 30px;
+  max-width: 760px;
+}
+.pf-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1d5ee0;
+}
+.pf-back:hover {
+  text-decoration: underline;
+}
+.pf h1 {
+  margin: 14px 0 0;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-strong, #0a0d2c);
+  letter-spacing: -0.01em;
+}
+.pf-sub {
+  position: relative;
+  display: inline-block;
+  margin: 6px 0 0;
+  font-size: 14.5px;
+  color: var(--text-muted, #4c576a);
+}
+.pf-swoosh {
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  width: 104px;
+  height: 10px;
+  fill: none;
+  stroke: #f07a15;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+}
+
+/* hero card: background matches the artwork's own peach so the two blend seamlessly */
+.pf-hero {
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-height: 150px;
+  padding: 16px 0 16px 18px;
+  border-radius: 16px;
+  background: #fef9ee;
+  overflow: hidden;
+}
+.pf-photo {
+  position: relative;
+  flex: none;
+}
+.pf-avatar {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 4px #fff;
+}
+.pf-avatar--initial {
+  display: grid;
+  place-items: center;
+  background: #1b6cfd;
+  color: #fff;
+  font-weight: 800;
+}
+.pf-cam {
+  position: absolute;
+  right: -4px;
+  bottom: -2px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 0;
+  background: #fff;
+  color: #1d5ee0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(20, 24, 60, 0.18);
+}
+.pf-cam:hover {
+  background: #eef3fe;
+}
+.pf-cam--del {
+  right: auto;
+  left: -4px;
+  width: 26px;
+  height: 26px;
+  color: #b42318;
+}
+.pf-who {
+  min-width: 0;
+  flex: 1;
+}
+.pf-who h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 800;
+  color: #0a0d2c;
+  overflow-wrap: anywhere;
+}
+.pf-who p {
+  margin: 6px 0 0;
+  font-size: 13.5px;
+  color: #3a3d55;
+  overflow-wrap: anywhere;
+}
+.pf-dept {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 500;
+  color: #1a1d33 !important;
+}
+.pf-unset {
+  color: var(--text-muted, #8a8fa6);
+  font-style: italic;
+  font-weight: 400;
+}
+.pf-art {
+  flex: none;
+  align-self: flex-end;
+  width: 150px;
+  height: auto;
+  margin: -16px 0 -16px auto;
+}
+
+/* profile information */
+.pf-info {
+  margin-top: 16px;
+  padding: 14px 16px 10px;
+}
+.pf-info header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pf-info h2 {
+  font-size: 17px;
+}
+.pf-edit-actions {
+  display: flex;
+  gap: 8px;
+}
+.pf-info dl {
+  margin: 10px 0 0;
+}
+.pf-row {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--line, #eef0f5);
+}
+.pf-row:last-child {
+  border-bottom: 0;
+}
+.pf-row dt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13.5px;
+  color: var(--text-muted, #4a4d63);
+}
+.pf-row dd {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text, #1a1d33);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.pf-row input {
+  width: 100%;
+  max-width: 320px;
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid var(--line-strong, #dfe2ea);
+  border-radius: 8px;
+  background: var(--surface, #fff);
+  color: var(--text, #1a1d33);
+  font: inherit;
+  font-size: 13.5px;
+}
+.pf-row input:focus {
+  outline: 2px solid #8fb4ff;
+  border-color: #8fb4ff;
+}
+.pf-note {
+  margin: 8px 0 2px;
+  font-size: 11.5px;
+  color: var(--text-muted, #6b6f86);
+}
+
+.pf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px solid var(--line-strong, #dfe2ea);
+  background: var(--surface, #fff);
+  color: var(--text, #1a1d33);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.pf-btn--outline {
+  border-color: #b9c9f2;
+  color: #1d4fd0;
+}
+.pf-btn--primary {
+  border: 0;
+  background: #0256fe;
+  color: #fff;
+}
+.pf-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* action rows */
+.pf-action {
+  width: 100%;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.pf-action:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(20, 24, 60, 0.08);
+}
+.pf-action:focus-visible {
+  outline: 2px solid #8fb4ff;
+  outline-offset: 2px;
+}
+.pf-action-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  color: #d63c3b;
+}
+.pf-action-icon--blue {
+  background: #e9f0fe;
+  color: #1d5ee0;
+}
+.pf-action-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+.pf-action-text b {
+  font-size: 15.5px;
+  color: var(--text-strong, #0e1130);
+}
+.pf-action-text small {
+  font-size: 13px;
+  color: var(--text-muted, #3a3d55);
+}
+.pf-chev {
+  color: var(--text, #1a1d33);
+}
+.pf-action--danger {
+  background: #fef7f7;
+  border: 1px solid #efa6a5;
+}
+.pf-action--danger .pf-action-text b {
+  color: #b52e2d;
+}
+
+/* password dialog */
+.pf-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(14, 17, 48, 0.32);
+}
+.pf-dialog {
+  width: min(420px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: var(--surface, #fff);
+  box-shadow: 0 20px 48px rgba(14, 17, 48, 0.25);
+}
+.pf-dialog header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pf-dialog h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-strong, #0e1130);
+}
+.pf-dialog label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-muted, #4a4d63);
+}
+.pf-dialog input {
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--line-strong, #dfe2ea);
+  border-radius: 8px;
+  background: var(--surface, #fff);
+  color: var(--text, #1a1d33);
+  font: inherit;
+  font-size: 14px;
+}
+.pf-dialog input:focus {
+  outline: 2px solid #8fb4ff;
+  border-color: #8fb4ff;
+}
+.pf-dialog footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 4px;
+}
+.pf-msg {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-size: 13px;
+}
+.pf-msg.ok {
+  color: #146c2e;
+}
+.pf-msg.bad {
+  color: #b42318;
+}
+.toast--bad {
+  background: #8f1d1a !important;
+}
+
+/* dark theme: the hero keeps a warm tint; the artwork's peach becomes a soft round spotlight */
+:root[data-theme='dark'] .pf-hero {
+  background: rgba(240, 150, 40, 0.1);
+}
+:root[data-theme='dark'] .pf-who h2 {
+  color: var(--text-strong);
+}
+:root[data-theme='dark'] .pf-who p,
+:root[data-theme='dark'] .pf-dept {
+  color: var(--text) !important;
+}
+:root[data-theme='dark'] .pf-art {
+  -webkit-mask-image: radial-gradient(circle at 55% 55%, #000 52%, transparent 71%);
+  mask-image: radial-gradient(circle at 55% 55%, #000 52%, transparent 71%);
+  filter: brightness(0.94);
+}
+:root[data-theme='dark'] .pf-avatar {
+  box-shadow: 0 0 0 4px var(--surface);
+}
+:root[data-theme='dark'] .pf-cam {
+  background: var(--surface-2);
+  color: #8fb0ff;
+}
+:root[data-theme='dark'] .pf-back,
+:root[data-theme='dark'] .pf-btn--outline {
+  color: #8fb0ff;
+}
+:root[data-theme='dark'] .pf-action-icon--blue {
+  background: var(--tint-blue);
+  color: #8fb0ff;
+}
+:root[data-theme='dark'] .pf-action--danger {
+  background: rgba(229, 72, 77, 0.1);
+  border-color: rgba(229, 72, 77, 0.45);
+}
+:root[data-theme='dark'] .pf-action--danger .pf-action-text b {
+  color: #ff9a9d;
+}
+:root[data-theme='dark'] .pf-backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 600px) {
+  .pf {
+    padding: 14px 16px 24px;
+  }
+  .pf h1 {
+    padding-right: 80px;
+  }
+  .pf-hero {
+    flex-wrap: wrap;
+    padding-right: 16px;
+  }
+  .pf-art {
+    display: none;
+  }
+  .pf-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
+}
