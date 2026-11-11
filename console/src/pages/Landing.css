@@ -1,0 +1,230 @@
+.landing {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+/* soft peach washes in the bottom corners of the mock */
+.landing-blob {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(18px);
+  z-index: 0;
+}
+.landing-blob--left {
+  width: 420px;
+  height: 300px;
+  left: -160px;
+  bottom: -150px;
+  background: radial-gradient(closest-side, #ffeee6 0%, rgba(255, 238, 230, 0) 100%);
+}
+.landing-blob--right {
+  width: 520px;
+  height: 360px;
+  right: -180px;
+  bottom: -170px;
+  background: radial-gradient(closest-side, #ffece8 0%, rgba(255, 236, 232, 0) 100%);
+}
+
+.landing-header {
+  position: relative;
+  z-index: 1;
+  padding: 14px 40px 0;
+}
+
+.landing-main {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  padding: 0 40px 40px 82px;
+}
+
+/* ---------- copy column ---------- */
+.landing-copy {
+  max-width: 470px;
+  padding-top: 40px;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-acadza {
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: 0.01em;
+  color: var(--navy);
+}
+
+.brand-check {
+  position: relative;
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: 0.01em;
+  color: #fff;
+  background: var(--orange);
+  border-radius: 8px;
+  padding: 1px 9px 2px;
+  line-height: 1.2;
+}
+
+.brand-sparkle {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: -16px;
+  right: -15px;
+  fill: var(--orange);
+}
+
+.brand-tagline {
+  margin: 8px 0 0;
+  font-size: 17px;
+  font-weight: 500;
+  color: #34354f;
+}
+
+.brand-tagline-under {
+  position: relative;
+  white-space: nowrap;
+}
+
+.brand-swoosh {
+  position: absolute;
+  left: 8px;
+  bottom: -11px;
+  width: 112px;
+  height: 11px;
+  fill: none;
+  stroke: var(--orange);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+}
+
+.landing-title {
+  margin: 44px 0 0;
+  font-weight: 800;
+  font-size: clamp(40px, 5.3vw, 60px);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  color: var(--navy);
+}
+
+.landing-title-accent {
+  color: var(--blue);
+}
+
+.landing-lede {
+  margin: 20px 0 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 352px;
+}
+
+.cta {
+  margin-top: 34px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 54px;
+  padding: 0 34px;
+  border: 0;
+  border-radius: 9px;
+  background: var(--blue-btn);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 38, 253, 0.22);
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.cta:hover {
+  background: var(--blue-btn-hover);
+  box-shadow: 0 8px 22px rgba(0, 38, 253, 0.3);
+}
+.cta:active {
+  transform: translateY(1px);
+}
+.cta:focus-visible {
+  outline: 3px solid #9fb2ff;
+  outline-offset: 3px;
+}
+
+.cta-arrow {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.15s ease;
+}
+.cta:hover .cta-arrow {
+  transform: translateX(3px);
+}
+
+/* ---------- illustration column ---------- */
+.landing-art {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.landing-art img {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  }
+
+/* ---------- small screens ---------- */
+@media (max-width: 860px) {
+  .landing-header {
+    padding: 14px 16px 0;
+  }
+  .landing-main {
+    grid-template-columns: 1fr;
+    padding: 24px 16px 40px;
+    gap: 8px;
+  }
+  .landing-copy {
+    max-width: none;
+  }
+  .landing-art {
+    order: -1;
+  }
+  .landing-art img {
+    max-width: 420px;
+  }
+  .landing-title {
+    margin-top: 28px;
+  }
+  .cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* the soft lavender disc behind the character in the mock (the artwork itself is transparent) */
+.landing-art {
+  background: radial-gradient(closest-side, rgba(226, 230, 252, 0.95) 0%, rgba(226, 230, 252, 0.55) 62%, rgba(226, 230, 252, 0) 100%);
+  border-radius: 50%;
+}
+:root[data-theme='dark'] .landing-art {
+  background: radial-gradient(closest-side, rgba(77, 110, 255, 0.18) 0%, rgba(77, 110, 255, 0.07) 60%, rgba(77, 110, 255, 0) 100%);
+}
