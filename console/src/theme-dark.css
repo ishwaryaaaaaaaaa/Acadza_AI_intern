@@ -1,0 +1,438 @@
+/* Dark theme. Applied when <html data-theme="dark"> (Settings → Theme → Dark, or Auto on a dark OS).
+   Its own steps, not an inverted light theme: surfaces lift with elevation, tints become translucent. */
+:root[data-theme='dark'] {
+  --bg: #0f1220;
+  --surface: #171b2e;
+  --surface-2: #1f2439;
+  --line: #2a3048;
+  --line-strong: #3a4160;
+  --text: #e3e6f2;
+  --text-strong: #f5f6fb;
+  --text-muted: #a2a8c4;
+  --hover: #22284080;
+  --tint-blue: rgba(77, 132, 255, 0.16);
+  --tint-amber: rgba(240, 150, 40, 0.16);
+  --navy: #eef0fa;
+  --ink: #c9cde0;
+  color-scheme: dark;
+}
+
+/* ---------- surfaces ---------- */
+:root[data-theme='dark'] body,
+:root[data-theme='dark'] .shell,
+:root[data-theme='dark'] .landing {
+  background: var(--bg);
+  color: var(--text);
+}
+:root[data-theme='dark'] .sidebar {
+  background: var(--surface);
+  border-right-color: var(--line);
+}
+:root[data-theme='dark'] .sidebar-wash,
+:root[data-theme='dark'] .landing-blob {
+  opacity: 0.12;
+}
+:root[data-theme='dark'] .card,
+:root[data-theme='dark'] .menu,
+:root[data-theme='dark'] .sort-menu,
+:root[data-theme='dark'] .editor {
+  background: var(--surface);
+  border-color: var(--line);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- text ---------- */
+:root[data-theme='dark'] .dash-hello h1,
+:root[data-theme='dark'] .card h2,
+:root[data-theme='dark'] .rv-titlerow h1,
+:root[data-theme='dark'] .rv-qhead h2,
+:root[data-theme='dark'] .rv-ai h2,
+:root[data-theme='dark'] .mr-head h1,
+:root[data-theme='dark'] .an-head h1,
+:root[data-theme='dark'] .st-head h1,
+:root[data-theme='dark'] .st-panel h2,
+:root[data-theme='dark'] .editor-head h3,
+:root[data-theme='dark'] .landing-title,
+:root[data-theme='dark'] .brand-acadza,
+:root[data-theme='dark'] .brandmark,
+:root[data-theme='dark'] .logo,
+:root[data-theme='dark'] .stat-value,
+:root[data-theme='dark'] .mr-stat b,
+:root[data-theme='dark'] .an-card b,
+:root[data-theme='dark'] .event-body strong,
+:root[data-theme='dark'] .legend strong,
+:root[data-theme='dark'] .qid {
+  color: var(--text-strong);
+}
+:root[data-theme='dark'] .dash-sub,
+:root[data-theme='dark'] .mr-sub,
+:root[data-theme='dark'] .an-sub,
+:root[data-theme='dark'] .st-sub,
+:root[data-theme='dark'] .landing-lede,
+:root[data-theme='dark'] .brand-tagline,
+:root[data-theme='dark'] .stat-sub,
+:root[data-theme='dark'] .event-body span,
+:root[data-theme='dark'] .event time,
+:root[data-theme='dark'] .legend,
+:root[data-theme='dark'] .mr-topic,
+:root[data-theme='dark'] .an-note,
+:root[data-theme='dark'] .an-foot,
+:root[data-theme='dark'] .kbd-hint,
+:root[data-theme='dark'] .ed-hint,
+:root[data-theme='dark'] .reply-preview span,
+:root[data-theme='dark'] .diff-title,
+:root[data-theme='dark'] .solver,
+:root[data-theme='dark'] .menu-title,
+:root[data-theme='dark'] .menu-empty {
+  color: var(--text-muted);
+}
+:root[data-theme='dark'] .nav-item,
+:root[data-theme='dark'] .menu-item,
+:root[data-theme='dark'] .icon-btn,
+:root[data-theme='dark'] .avatar-btn,
+:root[data-theme='dark'] .qtable,
+:root[data-theme='dark'] .mr-table,
+:root[data-theme='dark'] .an-table,
+:root[data-theme='dark'] .mathhtml,
+:root[data-theme='dark'] .opt-letter,
+:root[data-theme='dark'] .checks li,
+:root[data-theme='dark'] .quote-body p,
+:root[data-theme='dark'] .reply-preview p,
+:root[data-theme='dark'] .diff-line,
+:root[data-theme='dark'] .solver-line,
+:root[data-theme='dark'] .solver-text,
+:root[data-theme='dark'] .tab,
+:root[data-theme='dark'] .mr-tab,
+:root[data-theme='dark'] .choice small,
+:root[data-theme='dark'] .stat-label,
+:root[data-theme='dark'] .mr-stat small,
+:root[data-theme='dark'] .an-card small,
+:root[data-theme='dark'] .bars li,
+:root[data-theme='dark'] .d2-legend li,
+:root[data-theme='dark'] .legend-row,
+:root[data-theme='dark'] .an-insights li,
+:root[data-theme='dark'] .mr-impact li,
+:root[data-theme='dark'] .int-answer,
+:root[data-theme='dark'] .keyband-row,
+:root[data-theme='dark'] .mr-when,
+:root[data-theme='dark'] .rv-pager {
+  color: var(--text);
+}
+
+/* ---------- navigation ---------- */
+:root[data-theme='dark'] .nav-item:hover,
+:root[data-theme='dark'] .menu-item:hover,
+:root[data-theme='dark'] .icon-btn:hover,
+:root[data-theme='dark'] .avatar-btn:hover,
+:root[data-theme='dark'] .row:hover,
+:root[data-theme='dark'] .sort-menu button:hover {
+  background: var(--surface-2);
+}
+:root[data-theme='dark'] .nav-item.is-active {
+  color: #fff;
+}
+:root[data-theme='dark'] .role-pill {
+  background: var(--tint-blue);
+  color: var(--text);
+}
+:root[data-theme='dark'] .nav-rule {
+  border-top-color: var(--line);
+}
+:root[data-theme='dark'] .bell-dot {
+  border-color: var(--surface);
+}
+
+/* ---------- controls ---------- */
+:root[data-theme='dark'] .sort-btn,
+:root[data-theme='dark'] .mr-select,
+:root[data-theme='dark'] .mr-search,
+:root[data-theme='dark'] .an-range,
+:root[data-theme='dark'] .an-tablebtn,
+:root[data-theme='dark'] .mr-tab,
+:root[data-theme='dark'] .mr-view,
+:root[data-theme='dark'] .mr-continue,
+:root[data-theme='dark'] .btn-ghost,
+:root[data-theme='dark'] .rv-pager button,
+:root[data-theme='dark'] .chip--reports,
+:root[data-theme='dark'] .ed-field input,
+:root[data-theme='dark'] .ed-field select,
+:root[data-theme='dark'] .ed-key,
+:root[data-theme='dark'] .ed-tab,
+:root[data-theme='dark'] .reject-note textarea,
+:root[data-theme='dark'] .kbd-hint kbd {
+  background: var(--surface-2);
+  border-color: var(--line-strong);
+  color: var(--text);
+}
+:root[data-theme='dark'] .mr-select select,
+:root[data-theme='dark'] .mr-search input,
+:root[data-theme='dark'] .an-range select {
+  color: var(--text);
+}
+:root[data-theme='dark'] .mr-select option,
+:root[data-theme='dark'] .an-range option,
+:root[data-theme='dark'] .st-input option {
+  background: var(--surface);
+}
+:root[data-theme='dark'] .mr-tab.is-on,
+:root[data-theme='dark'] .ed-tab.is-on,
+:root[data-theme='dark'] .sort-menu button.is-on {
+  background: var(--tint-blue);
+  color: #8fb0ff;
+  border-color: #3b6fe0;
+}
+:root[data-theme='dark'] .tab.is-on {
+  color: #8fb0ff;
+}
+:root[data-theme='dark'] .tabs,
+:root[data-theme='dark'] .rv-head,
+:root[data-theme='dark'] .chips,
+:root[data-theme='dark'] .rv-choices,
+:root[data-theme='dark'] .editor-foot {
+  border-color: var(--line);
+}
+
+/* ---------- tables ---------- */
+:root[data-theme='dark'] .qtable thead th {
+  background: var(--surface);
+  color: var(--text-strong);
+  border-bottom-color: var(--line);
+}
+:root[data-theme='dark'] .mr-table thead th,
+:root[data-theme='dark'] .an-table th {
+  background: var(--surface-2);
+  color: var(--text-strong);
+}
+:root[data-theme='dark'] .qtable td,
+:root[data-theme='dark'] .mr-table td,
+:root[data-theme='dark'] .an-table td,
+:root[data-theme='dark'] .event,
+:root[data-theme='dark'] .st-row {
+  border-bottom-color: var(--line);
+}
+
+/* ---------- tinted blocks become translucent ---------- */
+:root[data-theme='dark'] .stat--critical,
+:root[data-theme='dark'] .mr-stat--rejected,
+:root[data-theme='dark'] .an-card--review {
+  background: rgba(229, 72, 77, 0.14);
+  color: #ff9a9d;
+}
+:root[data-theme='dark'] .stat--high {
+  background: rgba(240, 138, 28, 0.14);
+  color: #ffb36b;
+}
+:root[data-theme='dark'] .stat--medium,
+:root[data-theme='dark'] .mr-stat--edited,
+:root[data-theme='dark'] .an-card--rate {
+  background: rgba(226, 161, 42, 0.13);
+  color: #f2c46c;
+}
+:root[data-theme='dark'] .stat--resolved,
+:root[data-theme='dark'] .mr-stat--approved,
+:root[data-theme='dark'] .an-card--resolved {
+  background: rgba(47, 180, 91, 0.14);
+  color: #7fdc9c;
+}
+:root[data-theme='dark'] .mr-stat--total,
+:root[data-theme='dark'] .an-card--total {
+  background: rgba(77, 132, 255, 0.14);
+}
+:root[data-theme='dark'] .an-card--review b {
+  color: #ff9a9d;
+}
+:root[data-theme='dark'] .an-card--resolved b {
+  color: #7fdc9c;
+}
+:root[data-theme='dark'] .an-card--rate b {
+  color: #f2c46c;
+}
+:root[data-theme='dark'] .mr-stat--total .mr-stat-icon {
+  background: rgba(77, 132, 255, 0.22);
+}
+:root[data-theme='dark'] .issue,
+:root[data-theme='dark'] .chip--issue,
+:root[data-theme='dark'] .mr-pill--bad,
+:root[data-theme='dark'] .mr-pill--d-bad,
+:root[data-theme='dark'] .kpill--old,
+:root[data-theme='dark'] .checks li.is-bad span,
+:root[data-theme='dark'] .flag--instruction {
+  background: rgba(229, 72, 77, 0.18);
+  color: #ff9a9d;
+}
+:root[data-theme='dark'] .conf,
+:root[data-theme='dark'] .chip--conf,
+:root[data-theme='dark'] .conf-tag--high,
+:root[data-theme='dark'] .mr-pill--ok,
+:root[data-theme='dark'] .mr-pill--d-ok,
+:root[data-theme='dark'] .kpill--new {
+  background: rgba(47, 180, 91, 0.18);
+  color: #7fdc9c;
+}
+:root[data-theme='dark'] .chip--subject,
+:root[data-theme='dark'] .mr-pill--d-blue {
+  background: var(--tint-blue);
+  color: #a9c1ff;
+}
+:root[data-theme='dark'] .conf-tag--mixed,
+:root[data-theme='dark'] .conf-tag--medium,
+:root[data-theme='dark'] .mr-pill--warn,
+:root[data-theme='dark'] .solver-warn,
+:root[data-theme='dark'] .flag--gibberish,
+:root[data-theme='dark'] .flag--vague,
+:root[data-theme='dark'] .opt-doubt,
+:root[data-theme='dark'] .st-chip {
+  background: var(--tint-amber);
+  color: #f2c46c;
+}
+:root[data-theme='dark'] .autofix,
+:root[data-theme='dark'] .tag-live {
+  border-color: rgba(47, 180, 91, 0.45);
+  color: #7fdc9c;
+}
+
+/* ---------- review page blocks ---------- */
+:root[data-theme='dark'] .opt {
+  background: var(--surface-2);
+  border-color: var(--line);
+}
+:root[data-theme='dark'] .opt.is-correct {
+  background: rgba(47, 180, 91, 0.16);
+  border-color: rgba(47, 180, 91, 0.45);
+}
+:root[data-theme='dark'] .opt.is-doubt,
+:root[data-theme='dark'] .opt.is-missing,
+:root[data-theme='dark'] .diff--none {
+  background: rgba(240, 150, 40, 0.1);
+  border-color: rgba(240, 150, 40, 0.4);
+}
+:root[data-theme='dark'] .keyband {
+  background: rgba(229, 72, 77, 0.08);
+}
+:root[data-theme='dark'] .diff,
+:root[data-theme='dark'] .quotes li,
+:root[data-theme='dark'] .int-answer,
+:root[data-theme='dark'] .rv-solution,
+:root[data-theme='dark'] .ed-source,
+:root[data-theme='dark'] .st-engine,
+:root[data-theme='dark'] .mr-impact li {
+  background: var(--surface-2);
+  border-color: var(--line);
+  color: var(--text);
+}
+:root[data-theme='dark'] .mchip {
+  background: #2a3150;
+  border-color: var(--line-strong);
+}
+:root[data-theme='dark'] .diff del {
+  background: rgba(229, 72, 77, 0.25);
+  color: #ffb3b5;
+}
+:root[data-theme='dark'] .diff ins {
+  background: rgba(47, 180, 91, 0.25);
+  color: #a6ecbc;
+}
+:root[data-theme='dark'] .rv-banner {
+  background: rgba(47, 180, 91, 0.14);
+  color: #7fdc9c;
+}
+:root[data-theme='dark'] .choice--approve {
+  background: rgba(47, 180, 91, 0.1);
+}
+:root[data-theme='dark'] .choice--approve b {
+  color: #7fdc9c;
+}
+:root[data-theme='dark'] .choice--edit {
+  background: rgba(77, 132, 255, 0.1);
+}
+:root[data-theme='dark'] .choice--edit b {
+  color: #a9c1ff;
+}
+:root[data-theme='dark'] .choice--reject {
+  background: rgba(229, 72, 77, 0.1);
+}
+:root[data-theme='dark'] .choice--reject b {
+  color: #ff9a9d;
+}
+:root[data-theme='dark'] .editor-backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+:root[data-theme='dark'] .ed-key.is-on {
+  background: rgba(47, 180, 91, 0.2);
+  color: #7fdc9c;
+}
+
+/* ---------- charts ---------- */
+:root[data-theme='dark'] .lc-grid,
+:root[data-theme='dark'] .donut-track {
+  stroke: var(--line);
+}
+:root[data-theme='dark'] .lc-tick,
+:root[data-theme='dark'] .d2-cap,
+:root[data-theme='dark'] .donut-cap {
+  fill: var(--text-muted);
+}
+:root[data-theme='dark'] .d2-num,
+:root[data-theme='dark'] .donut-pct {
+  fill: var(--text-strong);
+}
+:root[data-theme='dark'] .lc circle {
+  fill: var(--surface);
+}
+:root[data-theme='dark'] .bar-track {
+  background: var(--surface-2);
+}
+:root[data-theme='dark'] .tip,
+:root[data-theme='dark'] .toast {
+  background: #2a3150;
+}
+
+/* ---------- illustrations ---------- */
+/* The artwork has transparent backgrounds, so it sits on the dark page directly; only take the edge off the brightest whites. */
+:root[data-theme='dark'] .landing-art img,
+:root[data-theme='dark'] .dash-art img,
+:root[data-theme='dark'] .rv-art,
+:root[data-theme='dark'] .mr-art,
+:root[data-theme='dark'] .an-ins-art,
+:root[data-theme='dark'] .st-art,
+:root[data-theme='dark'] .sidebar-art {
+  filter: brightness(0.94);
+}
+
+/* blue text (links, active tabs, IDs) needs a lighter step on dark surfaces to stay above 4.5:1 */
+:root[data-theme='dark'] .st-tab.is-on,
+:root[data-theme='dark'] .st-seg-btn.is-on,
+:root[data-theme='dark'] .link,
+:root[data-theme='dark'] .rv-back,
+:root[data-theme='dark'] .mr-qid,
+:root[data-theme='dark'] .mr-view,
+:root[data-theme='dark'] .mr-continue,
+:root[data-theme='dark'] .btn-ghost,
+:root[data-theme='dark'] .solver summary,
+:root[data-theme='dark'] .solver-more,
+:root[data-theme='dark'] .rv-solution-toggle,
+:root[data-theme='dark'] .filter-chip,
+:root[data-theme='dark'] .queue-title-icon,
+:root[data-theme='dark'] .side-icon,
+:root[data-theme='dark'] .menu-item strong {
+  color: #8fb0ff;
+}
+:root[data-theme='dark'] .filter-chip {
+  background: var(--tint-blue);
+}
+:root[data-theme='dark'] .st-tab.is-on,
+:root[data-theme='dark'] .st-seg-btn.is-on {
+  background: var(--tint-blue);
+  border-color: #3b6fe0;
+}
+:root[data-theme='dark'] .st-tabs {
+  border-right-color: var(--line);
+}
+
+/* the headline's blue word: the light-theme blue is too dark on the dark page */
+:root[data-theme='dark'] .landing-title-accent {
+  color: #6f8dff;
+}
+:root[data-theme='dark'] .cta {
+  box-shadow: 0 6px 18px rgba(0, 38, 253, 0.35);
+}
