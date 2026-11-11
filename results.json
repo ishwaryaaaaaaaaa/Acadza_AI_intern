@@ -1,0 +1,564 @@
+[
+  {
+    "reportId": "R001",
+    "questionId": "60f744b3f1b9bc7cc7b4a949",
+    "verdict": "defect",
+    "repair": "answer_key",
+    "edit": {
+      "field": "answer",
+      "find": "C",
+      "replace": "A"
+    },
+    "route": "auto_apply",
+    "confidence": 0.96,
+    "evidence": "Two independent blind solves give A but the stored key is C; stored solution also concludes with this answer.",
+    "student_reply": "Thank you for the heads-up. The answer was wrong, and we fixed it to A."
+  },
+  {
+    "reportId": "R002",
+    "questionId": "60f744b3f1b9bc7cc7b4a949",
+    "verdict": "defect",
+    "repair": "answer_key",
+    "edit": {
+      "field": "answer",
+      "find": "C",
+      "replace": "A"
+    },
+    "route": "auto_apply",
+    "confidence": 0.96,
+    "evidence": "Two independent blind solves give A but the stored key is C; stored solution also concludes with this answer.",
+    "student_reply": "Thank you for the heads-up. The answer was wrong, and we fixed it to A."
+  },
+  {
+    "reportId": "R003",
+    "questionId": "60f744b3f1b9bc7cc7b4a949",
+    "verdict": "defect",
+    "repair": "answer_key",
+    "edit": {
+      "field": "answer",
+      "find": "C",
+      "replace": "A"
+    },
+    "route": "auto_apply",
+    "confidence": 0.96,
+    "evidence": "Two independent blind solves give A but the stored key is C; stored solution also concludes with this answer.",
+    "student_reply": "Thank you for the heads-up. The answer was wrong, and we fixed it to A."
+  },
+  {
+    "reportId": "R004",
+    "questionId": "68e870ef42c06737d6e565c4",
+    "verdict": "defect",
+    "repair": "answer_key",
+    "edit": {
+      "field": "answer",
+      "find": "A",
+      "replace": "D"
+    },
+    "route": "auto_apply",
+    "confidence": 0.9,
+    "evidence": "Two independent blind solves give D but the stored key is A; stored solution does not reach a checkable conclusion.",
+    "student_reply": "Dhanyavaad! Aapne sahi kaha, aur ab humne poora sawal theek kar diya hai. Pehle galat jawaab tha, ab sahi jawaab hai: D."
+  },
+  {
+    "reportId": "R005",
+    "questionId": "68dea616d0cda73d07e93ae6",
+    "verdict": "defect",
+    "repair": "answer_key",
+    "edit": {
+      "field": "answer",
+      "find": "2",
+      "replace": "1"
+    },
+    "route": "auto_apply",
+    "confidence": 0.96,
+    "evidence": "Two independent blind solves give 1 but the stored key is 2; stored solution also concludes with this answer.",
+    "student_reply": "Thanks for the heads-up. The answer was wrong, but it's fixed now. The correct answer is 1."
+  },
+  {
+    "reportId": "R006",
+    "questionId": "696a866665252c04fc1f81c2",
+    "verdict": "defect",
+    "repair": "stem_data",
+    "edit": {
+      "field": "question",
+      "find": "solid copper cube,",
+      "replace": "solid copper cube of side 10 cm,"
+    },
+    "route": "auto_apply",
+    "confidence": 0.9,
+    "evidence": "Solution uses edge length 10×10⁻² m, not given in question; answer key 50 mm³ matches that assumption.",
+    "student_reply": "Good catch: a value needed to solve it was missing. It has been fixed now. Thanks for reporting!"
+  },
+  {
+    "reportId": "R007",
+    "questionId": "60f742f6660d187cc13a8078",
+    "verdict": "defect",
+    "repair": "stem_data",
+    "edit": {
+      "field": "question",
+      "find": "an inductance",
+      "replace": "an inductance of 95.5 mH"
+    },
+    "route": "auto_apply",
+    "confidence": 1.0,
+    "evidence": "The question does not state the value of the inductance.",
+    "student_reply": "Dhanyavaad! Aapne sahi kaha, inductance ki value nahi di thi. Ab sahi hai."
+  },
+  {
+    "reportId": "R008",
+    "questionId": "60f742f6660d187cc13a8078",
+    "verdict": "defect",
+    "repair": "stem_data",
+    "edit": {
+      "field": "question",
+      "find": "an inductance",
+      "replace": "an inductance of 95.5 mH"
+    },
+    "route": "auto_apply",
+    "confidence": 1.0,
+    "evidence": "The question does not state the value of the inductance.",
+    "student_reply": "Thank you for your report. The question did not state the value of the inductance, but it is now fixed."
+  },
+  {
+    "reportId": "R009",
+    "questionId": "622f08d7b70e4b50e4500a1b",
+    "verdict": "defect",
+    "repair": "option_repair",
+    "edit": null,
+    "route": "faculty_review",
+    "confidence": 0.9,
+    "evidence": "Question shows only options A, B, C; automatic check confirms option D missing.",
+    "student_reply": "A teacher will check and fix the question."
+  },
+  {
+    "reportId": "R010",
+    "questionId": "622f08d7b70e4b50e4500a1b",
+    "verdict": "defect",
+    "repair": "option_repair",
+    "edit": null,
+    "route": "faculty_review",
+    "confidence": 0.9,
+    "evidence": "Question shows only options A, B, C; automatic check confirms option D missing.",
+    "student_reply": "A teacher will check and fix the question."
+  },
+  {
+    "reportId": "R011",
+    "questionId": "68e872546e45ba37dcc16bc0",
+    "verdict": "defect",
+    "repair": "option_repair",
+    "edit": {
+      "field": "question",
+      "find": "C",
+      "replace": "C (missing)"
+    },
+    "route": "faculty_review",
+    "confidence": 0.9,
+    "evidence": "option C is blank, key is C",
+    "student_reply": "Dhanyavaad! Ek teacher yeh check karega aur sahi karega."
+  },
+  {
+    "reportId": "R012",
+    "questionId": "61dffbec08489156b684bd22",
+    "verdict": "defect",
+    "repair": "spelling",
+    "edit": {
+      "field": "question",
+      "find": "Epithellial tisue",
+      "replace": "Epithelial tissue"
+    },
+    "route": "auto_apply",
+    "confidence": 0.95,
+    "evidence": "Option A reads “Epithellial tisue”, but the correct term is “Epithelial tissue”; the solution references epithelial tissue, confirming the intended answer.",
+    "student_reply": "Thank you for reporting this! The question had a spelling mistake: the correct term is 'Epithelial tissue'. We've fixed it."
+  },
+  {
+    "reportId": "R013",
+    "questionId": "617fa18efd53ff1629ed890f",
+    "verdict": "defect",
+    "repair": "exam_reference",
+    "edit": {
+      "field": "question",
+      "find": "(NEET 2019)",
+      "replace": ""
+    },
+    "route": "auto_apply",
+    "confidence": 0.9,
+    "evidence": "Question contains '(NEET 2019)' tag; student asks why; answer D correct per solution; exam reference is unwanted.",
+    "student_reply": "Thanks for the heads-up! The question had an exam tag, which was removed. The correct answer is D."
+  },
+  {
+    "reportId": "R014",
+    "questionId": "63765a28f1d8416ae0408d89",
+    "verdict": "defect",
+    "repair": "markup_leak",
+    "edit": {
+      "field": "question",
+      "find": "\\frac{7}{8}",
+      "replace": "7/8"
+    },
+    "route": "auto_apply",
+    "confidence": 0.95,
+    "evidence": "Automatic check reports raw LaTeX '\\frac{7}{8}' visible in question; student noted \\frac code appearing.",
+    "student_reply": "Thank you for the report. The question had a problem with the math code, and the correct answer is C."
+  },
+  {
+    "reportId": "R015",
+    "questionId": "6956d79788d7701e5617bc29",
+    "verdict": "defect",
+    "repair": "identical_options",
+    "edit": null,
+    "route": "faculty_review",
+    "confidence": 0.95,
+    "evidence": "Options B and C both read \"0 W\"; automatic check flags OPT_DUP. Stored answer is B.",
+    "student_reply": "Thanks for the heads-up! A teacher will check and fix the issue."
+  },
+  {
+    "reportId": "R016",
+    "questionId": "6263d75bdd44e265ef926d97",
+    "verdict": "defect",
+    "repair": "solution_fix",
+    "edit": {
+      "field": "solution",
+      "find": "a = 40 cm",
+      "replace": "a = 20 cm"
+    },
+    "route": "auto_apply",
+    "confidence": 1.0,
+    "evidence": "The solution is wrong, the answer is correct.",
+    "student_reply": "Thank you for your report! The solution was wrong, but the answer is correct: 20 cm."
+  },
+  {
+    "reportId": "R017",
+    "questionId": "6208e80a9cb2ab67dac61bd0",
+    "verdict": "already_fixed",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 0.9,
+    "evidence": "Faculty edit log shows \"mere\" corrected to \"more\" in options A-C after the report; current options now read correctly.",
+    "student_reply": "Thanks! A teacher already corrected this after your report, so you should see the fixed version now."
+  },
+  {
+    "reportId": "R018",
+    "questionId": "612151a6a34397610a9a2e58",
+    "verdict": "defect",
+    "repair": "solution_fix",
+    "edit": {
+      "field": "solution",
+      "find": "5.469\\times10^{-10}m=5.47AA",
+      "replace": "none"
+    },
+    "route": "faculty_review",
+    "confidence": 0.99,
+    "evidence": "solution has a wrong step",
+    "student_reply": "Thanks for the heads-up. A teacher will check and fix the solution."
+  },
+  {
+    "reportId": "R019",
+    "questionId": "612151a6a34397610a9a2e58",
+    "verdict": "defect",
+    "repair": "solution_fix",
+    "edit": {
+      "field": "solution",
+      "find": "5.469\\times10^{-10}m=5.47AA",
+      "replace": "none"
+    },
+    "route": "faculty_review",
+    "confidence": 0.99,
+    "evidence": "solution has a wrong step",
+    "student_reply": "Dhanyavaad. Ek teacher solution check karega aur theek karega."
+  },
+  {
+    "reportId": "R020",
+    "questionId": "68c8153cfb6b2f16e2d3ceaf",
+    "verdict": "defect",
+    "repair": "answer_key",
+    "edit": {
+      "field": "answer",
+      "find": [
+        "A, B, D"
+      ],
+      "replace": [
+        "A",
+        "B",
+        "D"
+      ]
+    },
+    "route": "auto_apply",
+    "confidence": 0.95,
+    "evidence": "Malformed key ['A, B, D'] parses unambiguously to ['A', 'B', 'D'], matching two independent solves.",
+    "student_reply": "Thank you for the report. The correct answer is A, B, and D."
+  },
+  {
+    "reportId": "R021",
+    "questionId": "68f21caf941cda588bc04365",
+    "verdict": "defect",
+    "repair": "type_mismatch",
+    "edit": {
+      "field": "questionType",
+      "find": "mcq",
+      "replace": "scq"
+    },
+    "route": "auto_apply",
+    "confidence": 0.93,
+    "evidence": "Typed multiple-correct but exactly one option (B) is correct, confirmed by two independent solves; the key ['', 'B'] is also malformed.",
+    "student_reply": "Thank you! The question was set as multiple-choice but only one answer was correct. We fixed it to single-choice and the correct answer is B."
+  },
+  {
+    "reportId": "R022",
+    "questionId": "61ee6c9d90a1a968a168686b",
+    "verdict": "defect",
+    "repair": "spelling",
+    "edit": {
+      "field": "question",
+      "find": "plexux",
+      "replace": "plexus"
+    },
+    "route": "auto_apply",
+    "confidence": 1.0,
+    "evidence": "The word 'plexux' is present in the question text.",
+    "student_reply": "Thanks for the heads-up! The question had a typo: 'plexux' is now 'plexus'. The correct answer is B."
+  },
+  {
+    "reportId": "R023",
+    "questionId": "68ecbacb2ec87a18deba1ad7",
+    "verdict": "defect",
+    "repair": "wrong_chapter",
+    "edit": null,
+    "route": "faculty_review",
+    "confidence": 0.9,
+    "evidence": "Question about absolute refractory period (neural physiology) is filed under Botany chapter \"The Living World\", mismatched topic.",
+    "student_reply": "Thanks for the heads-up! A teacher will check and fix the question's topic and chapter."
+  },
+  {
+    "reportId": "R024",
+    "questionId": "5fc60508028950133eac8963",
+    "verdict": "no_error",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 0.9,
+    "evidence": "Question asks for frictional force; answer key 20 matches weight 20 N, unit implied by context. No unit required for integer answer.",
+    "student_reply": "You were asking for the frictional force, which is the force of friction between the body and the wall. The weight of the body is 20 N, and the frictional force is 20 N, so the answer is correct."
+  },
+  {
+    "reportId": "R025",
+    "questionId": "622df25ab70e4b50e44ff837",
+    "verdict": "defect",
+    "repair": "diagram",
+    "edit": null,
+    "route": "faculty_review",
+    "confidence": 1.0,
+    "evidence": "The question text mentions a figure, but no figure is shown.",
+    "student_reply": "Thanks for the heads-up! A teacher will check and fix the missing figure."
+  },
+  {
+    "reportId": "R026",
+    "questionId": "620e23cecc50543bc7db9186",
+    "verdict": "no_error",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 0.95,
+    "evidence": "Evolution topic; ancestral state inference is part of NEET syllabus; independent solvers confirm answer B is correct.",
+    "student_reply": "Thanks for your report! The correct answer is B, as using a distantly related snake as an outgroup can help determine the ancestral state."
+  },
+  {
+    "reportId": "R027",
+    "questionId": "6062ec84518e9535e120c422",
+    "verdict": "no_error",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 0.9,
+    "evidence": "Comment is an instruction aimed at the system, not an error report, so it was ignored. Independent solves confirm the stored key.",
+    "student_reply": "This box is only for reporting a mistake in a question. If something in this question looks wrong, tell us what and we'll check it."
+  },
+  {
+    "reportId": "R028",
+    "questionId": "6956d7bb23cb221e570d6013",
+    "verdict": "no_error",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 1.0,
+    "evidence": "The solution shows that the correct answer is B.",
+    "student_reply": "We solved this again from scratch and the given answer holds. Tell us the step where your answer differs and we'll go through it with you."
+  },
+  {
+    "reportId": "R029",
+    "questionId": "68e8734442c06737d6e56da4",
+    "verdict": "no_error",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 0.9,
+    "evidence": "The student's solution is not shown, and the stored solution is correct.",
+    "student_reply": "You were close, but the right answer is A. The key is to use the weight to find the mass, then solve for the force in each case, and finally for the coefficient of friction."
+  },
+  {
+    "reportId": "R030",
+    "questionId": "6956d7e988d7701e5617bd3e",
+    "verdict": "no_error",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 1.0,
+    "evidence": "The solution shows the correct answer.",
+    "student_reply": "We solved this again from scratch and the given answer holds. Tell us the step where your answer differs and we'll go through it with you."
+  },
+  {
+    "reportId": "R031",
+    "questionId": "68dea619d0cda73d07e93aee",
+    "verdict": "no_error",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 1.0,
+    "evidence": "The student's answer is not the stored answer.",
+    "student_reply": "Humne ise dobara solve kiya aur diya hua answer sahi hai. Aapka answer kis step par alag aaya, bataoge? Hum saath mein dekh lenge."
+  },
+  {
+    "reportId": "R032",
+    "questionId": "68dea7c2387eea3d0d95f9bb",
+    "verdict": "no_error",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 1.0,
+    "evidence": "The solution ends in 0.08m, which is 8cm.",
+    "student_reply": "Humne ise dobara solve kiya aur diya hua answer sahi hai. Aapka answer kis step par alag aaya, bataoge? Hum saath mein dekh lenge."
+  },
+  {
+    "reportId": "R033",
+    "questionId": "68dea715387eea3d0d95f790",
+    "verdict": "no_error",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 0.95,
+    "evidence": "Surface area = 6×(7.203)² = 311.299254 m²; rounded to 4 sig figs = 311.3; 10×311.3 = 3113, matching stored answer.",
+    "student_reply": "You rounded the surface area to 4 significant figures, which gives 311.3 m². 10 times this is 3113, the correct answer."
+  },
+  {
+    "reportId": "R034",
+    "questionId": "695ee00b88d7701e561aabc5",
+    "verdict": "defect",
+    "repair": "unsound",
+    "edit": null,
+    "route": "faculty_review",
+    "confidence": 0.95,
+    "evidence": "Assertion A false: two equal-amplitude waves with φ=π/2 give I=2I₀, not I₀. Reason R false: resultant intensity is not simply sum for non‑zero phase. No option matches both false, so question unsound.",
+    "student_reply": "A teacher will check and fix the question. Thanks for your help!"
+  },
+  {
+    "reportId": "R035",
+    "questionId": "66fe9dbe22132e5a70a3e579",
+    "verdict": "no_error",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 0.95,
+    "evidence": "Relaxin softens pelvic ligaments; inhibin suppresses FSH. They act independently, not antagonistically. Other pairs are antagonistic. Answer D is correct.",
+    "student_reply": "We solved this again from scratch and the given answer holds. Tell us the step where your answer differs and we'll go through it with you."
+  },
+  {
+    "reportId": "R036",
+    "questionId": "60ca4feb6420652745f55522",
+    "verdict": "display_issue",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 0.9,
+    "evidence": "Stored question lists options A–D; student reports they appear cut off on a phone screen.",
+    "student_reply": "The question itself is fine; this is a display problem on your screen. Try rotating to landscape or updating the app."
+  },
+  {
+    "reportId": "R037",
+    "questionId": "68c9ae5afb6b2f16e2d43b1c",
+    "verdict": "display_issue",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 0.9,
+    "evidence": "Student reports slow loading; question content and answer are correct.",
+    "student_reply": "The question itself is fine; this is a display problem on your screen. Try rotating to landscape or updating the app."
+  },
+  {
+    "reportId": "R038",
+    "questionId": "68f21df0941cda588bc0470b",
+    "verdict": "app_issue",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 0.9,
+    "evidence": "Stored answer A is correct (p∝√KE). Student reports clicking A but system saved B, indicating an app recording issue.",
+    "student_reply": "The question itself is fine; this looks like an app problem. Please update the app and try again; we've passed it to the app team."
+  },
+  {
+    "reportId": "R039",
+    "questionId": "68c801bc1b1dbc16dc93bf2b",
+    "verdict": "language_mode",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 1.0,
+    "evidence": "The question is in English.",
+    "student_reply": "Yeh question abhi sirf English mein available hai. Hindi version ke liye request note kar li hai."
+  },
+  {
+    "reportId": "R040",
+    "questionId": "6264197209f4fd65f58f5707",
+    "verdict": "no_error",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 0.95,
+    "evidence": "Question asks which food prevents vitamin A deficiency blindness; Golden rice (option C) produces beta‑carotene per solution; independent solvers also chose C; stored answer is C.",
+    "student_reply": "We solved this again from scratch and the given answer holds. Tell us the step where your answer differs and we'll go through it with you."
+  },
+  {
+    "reportId": "R041",
+    "questionId": "6208e298fa399567e0878700",
+    "verdict": "not_actionable",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 0.99,
+    "evidence": "The comment is empty or unintelligible.",
+    "student_reply": "Thanks for reporting! Could you tell us in one line what exactly looked wrong? We'll check it right away."
+  },
+  {
+    "reportId": "R042",
+    "questionId": "63c7cce12981ed154ee92c94",
+    "verdict": "defect",
+    "repair": "wrong_chapter",
+    "edit": null,
+    "route": "faculty_review",
+    "confidence": 0.95,
+    "evidence": "Question about displacement current in a capacitor (electromagnetism) but chapter listed as \"Geometrical optics and optical instruments\".",
+    "student_reply": "Thanks for the heads-up! A teacher will check and fix the chapter this question is filed under."
+  },
+  {
+    "reportId": "R043",
+    "questionId": "636283dbe3770c24f866e6d6",
+    "verdict": "no_error",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 1.0,
+    "evidence": "The solution shows that the surface density of the bigger drop is 4 times that of the smaller drop.",
+    "student_reply": "You were close. The surface density of the bigger drop is 4 times that of the smaller drop, so the ratio is 4:1. The correct answer is B."
+  },
+  {
+    "reportId": "R044",
+    "questionId": "68dea577d0cda73d07e9391c",
+    "verdict": "no_error",
+    "repair": null,
+    "edit": null,
+    "route": "no_change",
+    "confidence": 0.9,
+    "evidence": "The student's answer is 22 V, but the stored solution is correct.",
+    "student_reply": "You were close! The potential at P is 22 V, but at S it is 8 V, so the difference is 14 V."
+  }
+]
