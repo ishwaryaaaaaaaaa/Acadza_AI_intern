@@ -23,7 +23,7 @@ from .store import STORE  # noqa: E402
 # Order of attempts: Gemini first, then a lighter Gemini (separate quota), then Cohere as the safety net.
 CHAIN = [("gemini", "gemini-3.5-flash"), ("gemini", "gemini-3.5-flash-lite"),
          ("cohere", "command-a-plus-05-2026"), ("cohere", "command-r-plus-08-2024"),
-         ("groq", "llama-3.3-70b-versatile")]       # Groq: free, fast, OpenAI-style API; used last
+         ("groq", "openai/gpt-oss-120b")]       # Groq: free, fast, OpenAI-style API; used last (model chosen from the account list)
 MODEL = CHAIN[0][1]
 FALLBACK = CHAIN[3][1]
 MODEL_C1, MODEL_C2 = CHAIN[2][1], CHAIN[3][1]
@@ -122,8 +122,8 @@ def _groq(model: str, messages: list) -> tuple[str, int, int]:
     key = os.environ.get("GROQ_API_KEY")
     if not key:
         raise llm.LLMError("no groq key")
-    j = llm._post("https://api.groq.com/openai/v1/chat/completions", {"Authorization": f"Bearer {key}"},
-                  {"model": model, "messages": messages, "temperature": 0.2, "max_tokens": 1500}, retries=1)
+    j = llm._post("https://api.groq.com/openai/v1/chat/completions", {"Authorization": f"Bearer {key}", "User-Agent": "acadza-check/1.0"},
+                  {"model": model, "messages": messages, "temperature": 0.2, "max_tokens": 3000}, retries=1)
     text = (j["choices"][0]["message"].get("content") or "").strip()
     u = j.get("usage") or {}
     return text, int(u.get("prompt_tokens", 0)), int(u.get("completion_tokens", 0))
