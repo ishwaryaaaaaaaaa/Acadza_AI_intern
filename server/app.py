@@ -1,9 +1,11 @@
 """Faculty console API.   uvicorn server.app:app --port 8000"""
 from __future__ import annotations
 
+import hmac
+import os
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -112,8 +114,19 @@ def audit_log():
 
 
 @app.post("/api/admin/reset")
-def reset():
-    """Demo helper: forget every faculty action and start again from the engine's output."""
+def reset(request: Request):
+    """Forget every faculty action and start again from the engine's output.
+
+    Locked: on a server with ADMIN_KEY set, the request must send it in the X-Admin-Key header.
+    With no ADMIN_KEY (local development) only requests from this machine are accepted, so a public
+    deployment can never be wiped by a visitor.
+    """
+    key = os.environ.get("ADMIN_KEY", "")
+    if key:
+        if not hmac.compare_digest(request.headers.get("x-admin-key", ""), key):
+            raise HTTPException(403, "Reset needs the admin key.")
+    elif (request.client.host if request.client else "") not in ("127.0.0.1", "::1", "localhost", "testclient"):
+        raise HTTPException(403, "Reset is disabled on this server (no ADMIN_KEY set).")
     STORE.reset()
     return {"ok": True}
 

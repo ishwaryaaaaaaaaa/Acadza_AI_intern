@@ -15,7 +15,7 @@ import {
   TriangleAlert,
 } from 'lucide-react'
 import Shell from '../components/Shell.jsx'
-import { api } from '../api.js'
+import { api, errText } from '../api.js'
 import { useSettings } from '../settings.jsx'
 import art from '../assets/settings-illustration.webp'
 import './Settings.css'
@@ -83,6 +83,7 @@ export default function Settings() {
   const [status, setStatus] = useState(null) // {ok, msg}
   const [saving, setSaving] = useState(false)
   const [confirmReset, setConfirmReset] = useState(false)
+  const [adminKey, setAdminKey] = useState('')
 
   useEffect(() => setDraft(settings), [settings])
   useEffect(() => {
@@ -126,9 +127,17 @@ export default function Settings() {
   }
 
   const resetDemo = async () => {
-    await api('/admin/reset', { method: 'POST' })
-    setConfirmReset(false)
-    setStatus({ ok: true, msg: 'Demo data reset: every faculty decision was cleared. Settings were kept.' })
+    try {
+      await api('/admin/reset', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Admin-Key': adminKey },
+      })
+      setConfirmReset(false)
+      setAdminKey('')
+      setStatus({ ok: true, msg: 'Demo data reset: every faculty decision was cleared. Settings were kept.' })
+    } catch (e) {
+      setStatus({ ok: false, msg: errText(e) })
+    }
   }
 
   return (
@@ -278,6 +287,14 @@ export default function Settings() {
                       <span>
                         <TriangleAlert size={15} /> This can't be undone.
                       </span>
+                      <input
+                        className="st-input st-input--key"
+                        type="password"
+                        placeholder="Admin key (blank on your own computer)"
+                        value={adminKey}
+                        onChange={(e) => setAdminKey(e.target.value)}
+                        aria-label="Admin key"
+                      />
                       <button className="st-btn st-btn--danger" onClick={resetDemo}>
                         Yes, reset
                       </button>

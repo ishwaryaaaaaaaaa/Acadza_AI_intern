@@ -180,13 +180,13 @@ The console works **without any API key**: it loads the precomputed `results_ful
 
 ## 10. Deploy
 
-One service: FastAPI serves the built console. `render.yaml` is included (always-on plan with a 1 GB disk so teacher decisions survive restarts). Set `COHERE_API_KEY` in the service environment. Free tiers sleep or lose data on restart, so they are not suitable for a 7-day link. If the key runs out, everything except the chat still works from the precomputed results.
+One service: FastAPI serves the built console. `render.yaml` is included (always-on plan with a 1 GB disk so teacher decisions survive restarts). Set `COHERE_API_KEY` (only the chat needs it) and `ADMIN_KEY` (unlocks "Reset demo data"; without it, reset only works from the server's own machine) in the service environment. Free tiers sleep or lose data on restart, so they are not suitable for a 7-day link. If the key runs out, everything except the chat still works from the precomputed results.
 
 ## 11. Honest limits
 
 * Scored against **my** labels, not Acadza's.
-* No login: anyone with the link can approve, reject or reset. (I built a login, then removed it: it was not needed for a demo and locked its own author out.)
-* The "Reset demo data" button is open and should be protected before sharing widely.
+* No login: anyone with the link can approve, reject or edit (reset is locked). (I built a login, then removed it: it was not needed for a demo and locked its own author out.)
+* "Reset demo data" is locked: on a deployed server it needs the `ADMIN_KEY` secret.
 * The engine ran on free trial quotas, which shaped model choices and caused the fallbacks above.
 * Solutions longer than a small text fix are never auto-written; this costs a few "auto" points on purpose.
 

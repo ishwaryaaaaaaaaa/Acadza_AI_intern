@@ -368,3 +368,9 @@
     gap: 6px;
   }
 }
+
+.st-input--key {
+  max-width: 230px;
+  height: 32px;
+  font-size: 12.5px;
+}

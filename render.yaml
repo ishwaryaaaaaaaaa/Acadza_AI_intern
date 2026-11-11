@@ -8,6 +8,8 @@ services:
     envVars:
       - key: COHERE_API_KEY
         sync: false          # set in the Render dashboard; only the "Ask AI" chat needs it
+      - key: ADMIN_KEY
+        sync: false          # secret that unlocks "Reset demo data"; keep it to yourself
       - key: CONSOLE_STATE
         value: /data/state.json
       - key: CONSOLE_SETTINGS
