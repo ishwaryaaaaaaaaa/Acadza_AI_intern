@@ -1,0 +1,56 @@
+:root {
+  --navy: #15153d;
+  --ink: #33364f;
+  --muted: #5b5d78;
+  --blue: #0f33e6;
+  --blue-btn: #0026fd;
+  --blue-btn-hover: #001fd6;
+  --orange: #f47d0d;
+  --bg: #fefefe;
+  --peach: #fff1ea;
+  --font: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--navy);
+}
+
+.logo-word {
+  font-weight: 800;
+  font-size: 25px;
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
